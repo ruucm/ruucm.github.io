@@ -5,9 +5,19 @@ export default function Home() {
       Hello
       <br />
       I'm yongmin ruucm.
-      {/* <Link href="/about" as={process.env.BACKEND_URL + "/about"}>
-        <a>About</a>
-      </Link> */}
+      <br />
+      <br />
+      harbor.school (2018 ~ )
+      <br />→{" "}
+      <a href="https://harbor.school" target="_blank">
+        More
+      </a>
+      <br />
+      vincent project (2014 ~ 2016)
+      <br />→{" "}
+      <a href="https://www.instagram.com/vincent.project" target="_blank">
+        More
+      </a>
     </div>
   );
 }
