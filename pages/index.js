@@ -1,4 +1,3 @@
-import Link from "next/link";
 export default function Home() {
   return (
     <div>
@@ -6,18 +5,29 @@ export default function Home() {
       <br />
       I'm yongmin ruucm.
       <br />
-      <br />
-      harbor.school (2018 ~ )
-      <br />→{" "}
-      <a href="https://harbor.school" target="_blank">
-        More
-      </a>
-      <br />
-      vincent project (2014 ~ 2016)
-      <br />→{" "}
-      <a href="https://www.instagram.com/vincent.project" target="_blank">
-        More
-      </a>
+      <Card
+        title="harbor.school"
+        duration="2018 ~ "
+        outlink="https://harbor.school"
+      />
+      <Card
+        title="vincent project"
+        duration="2014 ~ 2016"
+        outlink="https://www.instagram.com/vincent.project/"
+      />
     </div>
+  );
+}
+
+function Card({ title, duration, outlink }) {
+  return (
+    <>
+      <br />
+      {`${title} (${duration})`}
+      <br />→{" "}
+      <a href={outlink} target="_blank">
+        More
+      </a>
+    </>
   );
 }
