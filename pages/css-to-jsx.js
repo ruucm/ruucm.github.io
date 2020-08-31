@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { transform } from "../utils/transform";
+import { useKeyPress } from "../hooks/use-key-press";
 
 function CSSToJSX() {
   const [formValues, setFormValues] = useState({
     textarea0: "",
   });
   const [transformed, setTransformed] = useState("");
-  const [error, setError] = useState();
+  const [error, setError] = useState("");
 
   function handleChange(event) {
     const target = event.target;
@@ -15,20 +16,28 @@ function CSSToJSX() {
     const name = target.name;
     setFormValues({ ...formValues, [name]: newValue });
   }
+  function handleSubmit() {
+    try {
+      let res = transform(`myCSS${formValues["textarea0"]}`);
+      console.log("res", res);
+      setTransformed(res["myCSS"]);
+      setError("");
+    } catch (error) {
+      console.error("error on transform", error);
+      setError(error.message);
+    }
+  }
+  const enterPress = useKeyPress("Enter");
+  useEffect(() => {
+    if (enterPress) handleSubmit();
+  }, [enterPress]);
+
   console.log("formValues", formValues);
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        try {
-          let res = transform(`myCSS${formValues["textarea0"]}`);
-          console.log("res", res);
-          setTransformed(res["myCSS"]);
-          setError("");
-        } catch (error) {
-          console.error("error on transform", error);
-          setError(error.message);
-        }
+        handleSubmit();
       }}
     >
       <div
