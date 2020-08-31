@@ -6,6 +6,7 @@ function CSSToJSX() {
     textarea0: "",
   });
   const [transformed, setTransformed] = useState("");
+  const [error, setError] = useState();
 
   function handleChange(event) {
     const target = event.target;
@@ -19,9 +20,15 @@ function CSSToJSX() {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        let res = transform(`myCSS${formValues["textarea0"]}`);
-        console.log("res", res);
-        setTransformed(res["myCSS"]);
+        try {
+          let res = transform(`myCSS${formValues["textarea0"]}`);
+          console.log("res", res);
+          setTransformed(res["myCSS"]);
+          setError("");
+        } catch (error) {
+          console.error("error on transform", error);
+          setError(error.message);
+        }
       }}
     >
       <div
@@ -43,9 +50,20 @@ function CSSToJSX() {
           onChange={handleChange}
           rows={30}
         />
-        <textarea value={JSON.stringify(transformed)} rows={30} />
+        <textarea value={JSON.stringify(transformed)} rows={30} readOnly />
       </div>
 
+      <br />
+      {error && (
+        <div
+          style={{
+            fontWeight: 700,
+            color: "red",
+          }}
+        >
+          {error}
+        </div>
+      )}
       <br />
       <input type="submit" />
     </form>
