@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { transform } from "../utils/transform";
-import { useKeyPress } from "../hooks/use-key-press";
 
 function CSSToJSX() {
   const [formValues, setFormValues] = useState({
@@ -27,10 +26,6 @@ function CSSToJSX() {
       setError(error.message);
     }
   }
-  // const enterPress = useKeyPress("Enter");
-  // useEffect(() => {
-  //   if (enterPress) handleSubmit();
-  // }, [enterPress]);
 
   console.log("formValues", formValues);
   return (
