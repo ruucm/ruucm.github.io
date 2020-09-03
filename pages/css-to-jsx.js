@@ -27,10 +27,10 @@ function CSSToJSX() {
       setError(error.message);
     }
   }
-  const enterPress = useKeyPress("Enter");
-  useEffect(() => {
-    if (enterPress) handleSubmit();
-  }, [enterPress]);
+  // const enterPress = useKeyPress("Enter");
+  // useEffect(() => {
+  //   if (enterPress) handleSubmit();
+  // }, [enterPress]);
 
   console.log("formValues", formValues);
   return (
