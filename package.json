@@ -2,9 +2,9 @@
   "name": "gh-pages",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
+    "start": "next",
     "build": "next build",
-    "start": "next start",
+    "serve": "next start",
     "export": "next export",
     "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && echo \"ruucm.me\" >> out/CNAME && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
