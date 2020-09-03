@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Card } from "../components/card";
 
 export default function Home() {
   return (
@@ -40,18 +41,5 @@ Youtube?
       Framer Korea Meetup 2
       Framer Korea Meetup 1 */}
     </div>
-  );
-}
-
-function Card({ title, duration, outlink }) {
-  return (
-    <>
-      <br />
-      {`${title} (${duration})`}
-      <br />→{" "}
-      <a href={outlink} target="_blank">
-        More
-      </a>
-    </>
   );
 }
