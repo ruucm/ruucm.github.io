@@ -2,7 +2,8 @@ export function Card({ title, duration, outlink }) {
   return (
     <>
       <br />
-      {`${title} (${duration})`}
+      {title}
+      {duration && ` (${duration})`}
       <br />→{" "}
       <a href={outlink} target="_blank">
         More

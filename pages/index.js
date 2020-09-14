@@ -11,10 +11,12 @@ export default function Home() {
       {/* Navigation */}
       <Link href="/carving" as={process.env.BACKEND_URL + "/"}>
         <a>Carving</a>
-      </Link>
+      </Link>{" "}
+      /{" "}
       <Link href="/media" as={process.env.BACKEND_URL + "/"}>
         <a>Media</a>
       </Link>
+      <br />
       <Card
         title="harbor.school"
         duration="2018 ~ "
