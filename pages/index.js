@@ -8,12 +8,14 @@ export default function Home() {
       <br />
       I'm yongmin ruucm.
       <br />
+      Design Engineer
+      <br />
       {/* Navigation */}
-      <Link href="/carving" as={process.env.BACKEND_URL + "/"}>
+      <Link href="/carving">
         <a>Carving</a>
       </Link>{" "}
       /{" "}
-      <Link href="/media" as={process.env.BACKEND_URL + "/"}>
+      <Link href="/media">
         <a>Media</a>
       </Link>
       <br />
@@ -42,6 +44,11 @@ Youtube?
 
       Framer Korea Meetup 2
       Framer Korea Meetup 1 */}
+      <footer>
+        <a href="http://twitter.com/ruucm" target="_blank">
+          @ruucm
+        </a>
+      </footer>
     </div>
   );
 }
