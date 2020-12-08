@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { Card } from "../components/card";
+import Link from "next/link"
+import { Card } from "../components/card"
 
 export default function Home() {
   return (
@@ -20,6 +20,11 @@ export default function Home() {
       </Link>
       <br />
       <Card
+        title="Freelance Works"
+        duration="2014 ~ "
+        link="/freelance-works"
+      />
+      <Card
         title="harbor.school"
         duration="2018 ~ "
         outlink="https://harbor.school"
@@ -29,26 +34,11 @@ export default function Home() {
         duration="2014 ~ 2016"
         outlink="https://www.instagram.com/vincent.project/"
       />
-      {/* class101
-
-
-harbor.school (version 2)
-harbor.school (version 1)
-harbor.school (version 0) - wordpress
-
-
-Harbor Pin
-
-Youtube?
-
-
-      Framer Korea Meetup 2
-      Framer Korea Meetup 1 */}
       <footer>
         <a href="http://twitter.com/ruucm" target="_blank">
           @ruucm
         </a>
       </footer>
     </div>
-  );
+  )
 }

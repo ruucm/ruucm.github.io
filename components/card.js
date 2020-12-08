@@ -1,13 +1,22 @@
-export function Card({ title, duration, outlink }) {
+import Link from "next/link"
+
+export function Card({ title, duration, outlink, link }) {
   return (
     <>
       <br />
       {title}
       {duration && ` (${duration})`}
       <br />→{" "}
-      <a href={outlink} target="_blank">
-        More
-      </a>
+      {link && (
+        <Link href={link}>
+          <a>More</a>
+        </Link>
+      )}
+      {!link && (
+        <a href={outlink} target="_blank">
+          More
+        </a>
+      )}
     </>
-  );
+  )
 }
