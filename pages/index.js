@@ -23,7 +23,7 @@ export default function Home() {
       <Card
         title="harbor.school"
         duration="2018 ~ "
-        outlink="https://harbor.school"
+        link="/portfolio/harbor-school"
       />
       <Card
         title="vincent project"
