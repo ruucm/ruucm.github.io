@@ -11,7 +11,7 @@ export default function Home() {
       </h2>
       <h3>Design Engineer</h3>
       <Card
-        title="Freelance Works"
+        title="freelance works"
         duration="2014 ~ "
         link="/freelance-works"
       />
