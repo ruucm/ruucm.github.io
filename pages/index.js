@@ -17,7 +17,7 @@ export default function Home() {
       />
       <Card
         title="harbor.school"
-        duration="2018 ~ "
+        duration="2018 ~ 2020"
         link="/portfolio/harbor-school"
       />
       <Card
