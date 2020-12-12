@@ -3,18 +3,20 @@ import Link from "next/link"
 export function Card({ title, duration, outlink, link }) {
   return (
     <>
-      <br />
-      {title}
-      {duration && ` (${duration})`}
-      <br />→{" "}
+      <h4>
+        {title}
+        {duration && ` (${duration})`}
+      </h4>
       {link && (
         <Link href={link}>
-          <a>More</a>
+          <a>
+            <button>More →</button>
+          </a>
         </Link>
       )}
       {!link && (
         <a href={outlink} target="_blank">
-          More
+          <button>More ↗︎</button>
         </a>
       )}
     </>
