@@ -1,9 +1,8 @@
-import Link from "next/link"
-import { Card } from "../components/card"
+import { Card, Layout } from "../components"
 
 export default function Home() {
   return (
-    <div>
+    <Layout>
       <h2>
         Hello
         <br />
@@ -31,26 +30,6 @@ export default function Home() {
         duration="2014 ~ 2016"
         outlink="https://www.instagram.com/vincent.project/"
       />
-      <footer>
-        {/* Navigation */}
-        <nav>
-          <ul>
-            <li>
-              <Link href="/carving">
-                <a>Carving</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/media">
-                <a>Media</a>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <a href="http://twitter.com/ruucm" target="_blank">
-          @ruucm
-        </a>
-      </footer>
-    </div>
+    </Layout>
   )
 }
