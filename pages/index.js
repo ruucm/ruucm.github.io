@@ -3,11 +3,6 @@ import { Card, Layout } from "../components"
 export default function Home() {
   return (
     <Layout>
-      <h2>
-        Hello
-        <br />
-        I'm yongmin ruucm.
-      </h2>
       <h3>Design Engineer</h3>
       <p>I love designs and functions appears in digital gen.</p>
       <Card
