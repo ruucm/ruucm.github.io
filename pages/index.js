@@ -10,6 +10,7 @@ export default function Home() {
         I'm yongmin ruucm.
       </h2>
       <h3>Design Engineer</h3>
+      <p>I love designs and functions appears in digital gen.</p>
       <Card
         title="lighthouse design system"
         duration="2020 ~ "
