@@ -5,7 +5,7 @@ export default function FreelanceWorks() {
     <div>
       <div>Freelance Works</div>
       <img
-        src={require("../assets/portfolio-1.jpeg")}
+        src={require("../../assets/portfolio-1.jpeg")}
         style={{
           display: "block",
           width: 300,

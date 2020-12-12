@@ -18,7 +18,7 @@ export default function Home() {
       <Card
         title="freelance works"
         duration="2014 ~ "
-        link="/freelance-works"
+        link="/portfolio/freelance-works"
       />
       <Card
         title="harbor.school"
