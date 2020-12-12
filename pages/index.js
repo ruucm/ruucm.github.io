@@ -11,6 +11,11 @@ export default function Home() {
       </h2>
       <h3>Design Engineer</h3>
       <Card
+        title="lighthouse design system"
+        duration="2020 ~ "
+        outlink="https://lighthouse.harbor.school"
+      />
+      <Card
         title="freelance works"
         duration="2014 ~ "
         link="/freelance-works"
