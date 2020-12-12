@@ -10,13 +10,7 @@ export function Card({ title, duration, outlink, link }) {
       {link && (
         <Link href={link}>
           <a>
-            <button
-              style={{
-                lineHeight: "19px",
-              }}
-            >
-              More →
-            </button>
+            <button>More →</button>
           </a>
         </Link>
       )}
