@@ -1,6 +1,9 @@
 import Link from "next/link"
+import { useHover } from "../hooks/use-hover"
 
 export function Layout({ children }) {
+  const [hoverRef, isHover] = useHover()
+
   return (
     <>
       <header>
@@ -12,8 +15,9 @@ export function Layout({ children }) {
               padding: 5,
               cursor: "pointer",
             }}
+            ref={hoverRef}
           >
-            Hello
+            {isHover ? "안녕 하세요," : "Hello,"}
             <br />
             I'm yongmin ruucm.
           </h2>
