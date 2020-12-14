@@ -2,7 +2,13 @@ import Link from "next/link"
 
 export function Card({ title, duration, outlink, link }) {
   return (
-    <>
+    <div
+      style={{
+        border: "1px solid black",
+        marginBottom: 10,
+        padding: 10,
+      }}
+    >
       <h4>
         {title}
         {duration && ` (${duration})`}
@@ -17,6 +23,6 @@ export function Card({ title, duration, outlink, link }) {
           More (outlink)
         </a>
       )}
-    </>
+    </div>
   )
 }
