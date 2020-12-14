@@ -9,14 +9,12 @@ export function Card({ title, duration, outlink, link }) {
       </h4>
       {link && (
         <Link href={link}>
-          <a>
-            <button>More →</button>
-          </a>
+          <a>More</a>
         </Link>
       )}
       {!link && (
         <a href={outlink} target="_blank">
-          <button>More ↗︎</button>
+          More (outlink)
         </a>
       )}
     </>
