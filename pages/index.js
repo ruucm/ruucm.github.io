@@ -17,7 +17,12 @@ export default function Home() {
       <AnimateSharedLayout>
         <em
           onClick={shuffleList}
-          style={{ display: "block", textAlign: "right", cursor: "pointer" }}
+          style={{
+            display: "block",
+            textAlign: "right",
+            cursor: "pointer",
+            marginBottom: 7,
+          }}
         >
           shuffle
         </em>
