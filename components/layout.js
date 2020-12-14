@@ -17,7 +17,12 @@ export function Layout({ children }) {
         </h2>
       </header>
 
-      <div style={{ display: "grid", gridTemplateColumns: "4fr 1fr" }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "4fr 1fr",
+        }}
+      >
         <main>{children}</main>
         <footer
           style={{
