@@ -9,7 +9,7 @@ export default function Home() {
   const [isGrid, setIsGrid] = useState(false)
   const shuffleList = () => setData(shuffle(data))
   return (
-    <Layout>
+    <Layout home>
       <h3>Design Engineer</h3>
       <p>
         Yongmin Ji is an experienced front-end developer with a designer's

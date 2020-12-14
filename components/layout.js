@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { useHover } from "../hooks/use-hover"
 
-export function Layout({ children }) {
+export function Layout({ children, home = false }) {
   const [hoverRef, isHover] = useHover()
 
   return (
@@ -10,7 +10,7 @@ export function Layout({ children }) {
         <Link href="/">
           <h2
             style={{
-              background: "green",
+              background: home ? "green" : "hsl(120 0% 65% / 1)",
               display: "inline-block",
               padding: 5,
               cursor: "pointer",
