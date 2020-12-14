@@ -6,6 +6,7 @@ import shuffle from "lodash.shuffle"
 
 export default function Home() {
   const [data, setData] = useState(cardDatas)
+  const [isGrid, setIsGrid] = useState(false)
   const shuffleList = () => setData(shuffle(data))
   return (
     <Layout>
@@ -15,27 +16,49 @@ export default function Home() {
         mindset.
       </p>
       <AnimateSharedLayout>
-        <em
-          onClick={shuffleList}
+        <div
           style={{
-            display: "block",
             textAlign: "right",
-            cursor: "pointer",
             marginBottom: 7,
           }}
         >
-          shuffle
-        </em>
-        {data.map((data, id) => (
-          <Card
-            key={id}
-            title={data.title}
-            duration={data.duration}
-            description={data.description}
-            outlink={data.outlink}
-            link={data.link}
-          />
-        ))}
+          <em
+            onClick={() => setIsGrid(!isGrid)}
+            style={{
+              cursor: "pointer",
+              marginRight: 10,
+            }}
+          >
+            {isGrid ? "⊞" : "⊟"}
+          </em>
+          <em
+            onClick={shuffleList}
+            style={{
+              cursor: "pointer",
+            }}
+          >
+            shuffle
+          </em>
+        </div>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: isGrid ? "repeat(3, 1fr)" : "1fr",
+            gap: "10px",
+          }}
+        >
+          {data.map((data, id) => (
+            <Card
+              key={id}
+              title={data.title}
+              duration={data.duration}
+              description={data.description}
+              outlink={data.outlink}
+              link={data.link}
+            />
+          ))}
+        </div>
       </AnimateSharedLayout>
     </Layout>
   )
