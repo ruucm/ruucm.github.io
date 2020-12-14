@@ -11,8 +11,8 @@ export function Card({ title, duration, description, outlink, link }) {
       }}
       style={{
         border: "1px solid black",
-        marginBottom: 10,
         padding: "30px 15px",
+        display: "inline-block",
       }}
     >
       <h4

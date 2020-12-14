@@ -45,7 +45,7 @@ export default function Home() {
           style={{
             display: "grid",
             gridTemplateColumns: isGrid ? "repeat(3, 1fr)" : "1fr",
-            gap: "10px",
+            gap: "20px",
           }}
         >
           {data.map((data, id) => (
