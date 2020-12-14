@@ -1,8 +1,14 @@
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 export function Card({ title, duration, description, outlink, link }) {
   return (
-    <div
+    <motion.div
+      key={title}
+      layoutId={title}
+      transition={{
+        duration: 1,
+      }}
       style={{
         border: "1px solid black",
         marginBottom: 10,
@@ -28,6 +34,6 @@ export function Card({ title, duration, description, outlink, link }) {
           More (outlink)
         </a>
       )}
-    </div>
+    </motion.div>
   )
 }
