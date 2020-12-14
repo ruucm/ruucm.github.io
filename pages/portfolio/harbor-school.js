@@ -37,12 +37,6 @@ export default function HarborSchoolPage(props) {
         <br />I started to find the fastest and reliable method for that
         problem.
       </p>
-      <div>
-        Back to{" "}
-        <Link href="/" as={process.env.BACKEND_URL + "/"}>
-          <a>Home</a>
-        </Link>
-      </div>
     </Layout>
   )
 }
