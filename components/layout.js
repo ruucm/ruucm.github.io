@@ -4,17 +4,20 @@ export function Layout({ children }) {
   return (
     <>
       <header>
-        <h2
-          style={{
-            background: "green",
-            display: "inline-block",
-            padding: 5,
-          }}
-        >
-          Hello
-          <br />
-          I'm yongmin ruucm.
-        </h2>
+        <Link href="/">
+          <h2
+            style={{
+              background: "green",
+              display: "inline-block",
+              padding: 5,
+              cursor: "pointer",
+            }}
+          >
+            Hello
+            <br />
+            I'm yongmin ruucm.
+          </h2>
+        </Link>
       </header>
 
       <div
