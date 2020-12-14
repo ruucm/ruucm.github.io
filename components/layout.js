@@ -3,16 +3,20 @@ import Link from "next/link"
 export function Layout({ children }) {
   return (
     <>
-      <h2
-        style={{
-          background: "green",
-          display: "inline-block",
-        }}
-      >
-        Hello
-        <br />
-        I'm yongmin ruucm.
-      </h2>
+      <header>
+        <h2
+          style={{
+            background: "green",
+            display: "inline-block",
+            padding: 5,
+          }}
+        >
+          Hello
+          <br />
+          I'm yongmin ruucm.
+        </h2>
+      </header>
+
       <div style={{ display: "grid", gridTemplateColumns: "4fr 1fr" }}>
         <main>{children}</main>
         <footer
