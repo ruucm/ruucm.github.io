@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export function Card({ title, duration, outlink, link }) {
+export function Card({ title, duration, description, outlink, link }) {
   return (
     <div
       style={{
@@ -17,15 +17,7 @@ export function Card({ title, duration, outlink, link }) {
         {title}
         {duration && ` (${duration})`}
       </h4>
-      <p>
-        {Math.random() > 0.3
-          ? `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus
-          risus eu nisi finibus egestas. Vivamus nec pharetra urna. Mauris enim
-          tortor, lacinia vel euismod iaculis, congue quis augue. In
-          pellentesque mauris vel risus tempor, non porttitor arcu porttitor.`
-          : `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus
-          risus eu nisi finibus egestas.`}
-      </p>
+      <p>{description}</p>
       {link && (
         <Link href={link}>
           <a>More</a>
