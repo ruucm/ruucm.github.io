@@ -22,7 +22,7 @@ export default function Home() {
             marginBottom: 7,
           }}
         >
-          <em
+          {/* <em
             onClick={() => setIsGrid(!isGrid)}
             style={{
               cursor: "pointer",
@@ -30,7 +30,7 @@ export default function Home() {
             }}
           >
             {isGrid ? "⊞" : "⊟"}
-          </em>
+          </em> */}
           <em
             onClick={shuffleList}
             style={{

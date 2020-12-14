@@ -5,17 +5,29 @@ export default function HarborSchoolPage(props) {
   return (
     <Layout>
       <h3>Harbor School</h3>
-      <h4>Role - Founder/Developer</h4>
-      <h4>
+      <p>Role - Founder/Developer</p>
+      <p>
         Link -{" "}
-        <a href="https://harbor.school" target="_blank">
+        <a
+          href="https://harbor.school"
+          target="_blank"
+          style={{
+            color: "black",
+          }}
+        >
           harbor.school
         </a>{" "}
         /{" "}
-        <a href="https://class.harbor.school" target="_blank">
+        <a
+          href="https://class.harbor.school"
+          target="_blank"
+          style={{
+            color: "black",
+          }}
+        >
           class.harbor.school
         </a>
-      </h4>
+      </p>
       <div
         style={{
           display: "grid",
@@ -31,6 +43,7 @@ export default function HarborSchoolPage(props) {
             height: "100%",
             width: "100%",
             objectFit: "cover",
+            border: "1px solid black",
           }}
         />
         <div
@@ -39,18 +52,21 @@ export default function HarborSchoolPage(props) {
             padding: "30px 15px",
           }}
         >
-          <h4>[Problems] - Education Content Experience</h4>I learn programming
-          and design by myself with youtube videos and blog posts. But as a
-          learner's view, there are solid problem on both side. On video side,
-          it is always difficult to jump the point directly you want. If you
-          find a just example line of code, watching video could be terrible
-          experiences. On post side, it is easy to find information but
+          <h4
+            style={{
+              textDecoration: "underline",
+            }}
+          >
+            [Problems] - Education Content Experience
+          </h4>
+          I learn programming and design by myself with youtube videos and blog
+          posts. But as a learner's view, there are solid problem on both side.
+          On video side, it is always difficult to jump the point directly you
+          want. If you find a just example line of code, watching video could be
+          terrible experiences. On post side, it is easy to find information but
           sometimes post author could skip contents that makes students take a
           ton of times for finding why their project don't excuted like the
-          post. So I started develop a new UI called "Video Explorer". I
-          combines good points of video and post at the same time. It includes
-          whole proccess of tutorial to make the results, and user can find
-          information quickly like the blog posts.
+          post.
         </div>
       </div>
 
@@ -68,6 +84,7 @@ export default function HarborSchoolPage(props) {
             width: "100%",
             objectFit: "cover",
             marginBottom: 30,
+            border: "1px solid black",
           }}
         />
         <div
@@ -75,17 +92,16 @@ export default function HarborSchoolPage(props) {
             padding: "30px 15px",
           }}
         >
-          <h4>[Solution] - Video Explorer</h4>I learn programming and design by
-          myself with youtube videos and blog posts. But as a learner's view,
-          there are solid problem on both side. On video side, it is always
-          difficult to jump the point directly you want. If you find a just
-          example line of code, watching video could be terrible experiences. On
-          post side, it is easy to find information but sometimes post author
-          could skip contents that makes students take a ton of times for
-          finding why their project don't excuted like the post. So I started
-          develop a new UI called "Video Explorer". I combines good points of
-          video and post at the same time. It includes whole proccess of
-          tutorial to make the results, and user can find information quickly
+          <h4
+            style={{
+              textDecoration: "underline",
+            }}
+          >
+            [Solution] - Video Explorer
+          </h4>
+          So I started develop a new UI called "Video Explorer". I combines good
+          points of video and post at the same time. It includes whole proccess
+          of tutorial to make the results, and user can find information quickly
           like the blog posts.
         </div>
       </div>
