@@ -9,7 +9,11 @@ export function Card({ title, duration, outlink, link }) {
         padding: 10,
       }}
     >
-      <h4>
+      <h4
+        style={{
+          marginTop: 0,
+        }}
+      >
         {title}
         {duration && ` (${duration})`}
       </h4>
