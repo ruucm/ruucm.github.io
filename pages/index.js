@@ -101,7 +101,6 @@ export default function Home() {
 function tagFilter(tags, item) {
   for (let i = 0; i < item.tags.length; i++) {
     const tag = item.tags[i]
-    console.log("tags.includes(tag)", tags.includes(tag))
     if (tags.includes(tag)) return true
   }
 }
