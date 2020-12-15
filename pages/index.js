@@ -16,13 +16,13 @@ export default function Home() {
         mindset.
       </p>
       <AnimateSharedLayout>
-        <div
+        {/* <div
           style={{
             textAlign: "right",
             marginBottom: 7,
           }}
         >
-          {/* <em
+          <em
             onClick={() => setIsGrid(!isGrid)}
             style={{
               cursor: "pointer",
@@ -30,7 +30,7 @@ export default function Home() {
             }}
           >
             {isGrid ? "⊞" : "⊟"}
-          </em> */}
+          </em>
           <span
             onClick={shuffleList}
             style={{
@@ -40,7 +40,7 @@ export default function Home() {
           >
             🔀
           </span>
-        </div>
+        </div> */}
 
         <div
           style={{
