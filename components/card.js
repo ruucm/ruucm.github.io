@@ -1,40 +1,59 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 
+const wrap = {
+  active: {
+    opacity: 1,
+  },
+  inActive: {
+    opacity: 0,
+  },
+}
+
 export function Card({ title, duration, description, outlink, link }) {
   return (
     <motion.div
-      key={title}
       layoutId={title}
       transition={{
-        duration: 1,
+        duration: 0.36,
       }}
       style={{
-        border: "1px solid black",
-        padding: "30px 15px",
         display: "inline-block",
       }}
     >
-      <h4
+      <motion.div
+        initial={wrap.inActive}
+        animate={wrap.active}
+        exit={wrap.inActive}
+        transition={{
+          duration: 0.36,
+        }}
         style={{
-          marginTop: 0,
-          textTransform: "lowercase",
+          border: "1px solid black",
+          padding: "30px 15px",
         }}
       >
-        {title}
-        {duration && ` (${duration})`}
-      </h4>
-      <p>{description}</p>
-      {link && (
-        <Link href={link}>
-          <a>More</a>
-        </Link>
-      )}
-      {!link && (
-        <a href={outlink} target="_blank">
-          More (outlink)
-        </a>
-      )}
+        <h4
+          style={{
+            marginTop: 0,
+            textTransform: "lowercase",
+          }}
+        >
+          {title}
+          {duration && ` (${duration})`}
+        </h4>
+        <p>{description}</p>
+        {link && (
+          <Link href={link}>
+            <a>More</a>
+          </Link>
+        )}
+        {!link && (
+          <a href={outlink} target="_blank">
+            More (outlink)
+          </a>
+        )}
+      </motion.div>
     </motion.div>
   )
 }

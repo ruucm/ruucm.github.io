@@ -1,14 +1,11 @@
 import { useState } from "react"
 import { Card, Layout } from "../components"
 import { cardDatas } from "../consts"
-import { AnimateSharedLayout } from "framer-motion"
-import shuffle from "lodash.shuffle"
+import { AnimateSharedLayout, AnimatePresence } from "framer-motion"
 import { removeA } from "../utils/removeA"
 
 export default function Home() {
   const [data, setData] = useState(cardDatas)
-  const [isGrid, setIsGrid] = useState(false)
-  const shuffleList = () => setData(shuffle(data))
   const [tags, setTags] = useState(["design", "develop", "marketing"])
 
   return (
@@ -25,24 +22,6 @@ export default function Home() {
             marginBottom: 7,
           }}
         >
-          {/* <em
-            onClick={() => setIsGrid(!isGrid)}
-            style={{
-              cursor: "pointer",
-              marginRight: 10,
-            }}
-          >
-            {isGrid ? "⊞" : "⊟"}
-          </em>
-          <span
-            onClick={shuffleList}
-            style={{
-              cursor: "pointer",
-              filter: "grayscale(1)",
-            }}
-          >
-            🔀
-          </span> */}
           <em
             className={`tags ${tags.includes("design") && "active"}`}
             style={{
@@ -96,29 +75,33 @@ export default function Home() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: isGrid ? "repeat(3, 1fr)" : "1fr",
+            gridTemplateColumns: "1fr",
             gap: "20px",
           }}
         >
-          {data
-            .filter((item) => {
-              for (let i = 0; i < item.tags.length; i++) {
-                const tag = item.tags[i]
-                if (tags.includes(tag)) return true
-              }
-            })
-            .map((item, id) => (
-              <Card
-                key={id}
-                title={item.title}
-                duration={item.duration}
-                description={item.description}
-                outlink={item.outlink}
-                link={item.link}
-              />
-            ))}
+          {data.map((item, id) => (
+            <AnimatePresence key={id}>
+              {tagFilter(tags, item) && (
+                <Card
+                  title={item.title}
+                  duration={item.duration}
+                  description={item.description}
+                  outlink={item.outlink}
+                  link={item.link}
+                />
+              )}
+            </AnimatePresence>
+          ))}
         </div>
       </AnimateSharedLayout>
     </Layout>
   )
+}
+
+function tagFilter(tags, item) {
+  for (let i = 0; i < item.tags.length; i++) {
+    const tag = item.tags[i]
+    console.log("tags.includes(tag)", tags.includes(tag))
+    if (tags.includes(tag)) return true
+  }
 }
