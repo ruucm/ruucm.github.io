@@ -18,6 +18,7 @@ export function Card({ title, duration, description, outlink, link }) {
       <h4
         style={{
           marginTop: 0,
+          textTransform: "lowercase",
         }}
       >
         {title}
