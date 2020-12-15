@@ -31,14 +31,15 @@ export default function Home() {
           >
             {isGrid ? "⊞" : "⊟"}
           </em> */}
-          <em
+          <span
             onClick={shuffleList}
             style={{
               cursor: "pointer",
+              filter: "grayscale(1)",
             }}
           >
-            ⥂
-          </em>
+            🔀
+          </span>
         </div>
 
         <div
