@@ -10,7 +10,7 @@ export function Layout({ children, home = false }) {
         <Link href="/">
           <h2
             style={{
-              background: home ? "green" : "hsl(120 0% 65% / 1)",
+              // background: home ? "green" : "hsl(120 0% 65% / 1)",
               display: "inline-block",
               padding: 5,
               cursor: "pointer",
@@ -19,7 +19,13 @@ export function Layout({ children, home = false }) {
           >
             {isHover ? "안녕 하세요," : "Hello,"}
             <br />
-            I'm yongmin ruucm.
+            <span
+              style={{
+                textDecoration: "underline",
+              }}
+            >
+              I'm yongmin ruucm.
+            </span>
           </h2>
         </Link>
       </header>

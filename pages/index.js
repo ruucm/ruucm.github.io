@@ -37,7 +37,7 @@ export default function Home() {
               cursor: "pointer",
             }}
           >
-            shuffle
+            ⇄
           </em>
         </div>
 
