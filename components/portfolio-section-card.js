@@ -62,6 +62,7 @@ const Image = ({ img, grayscale, zoomed, setZoomed }) => {
         paddingTop: "66.66%",
         cursor: zoomed ? "zoom-out" : "zoom-in",
         filter: grayscale ? "grayscale(1)" : "grayscale(0)",
+        border: "1px solid black",
       }}
     >
       <motion.div
