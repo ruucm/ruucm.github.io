@@ -11,6 +11,7 @@ export function PortfolioSectionCard({
   title,
   description,
   grayscale = false,
+  alignRight = false,
 }) {
   const [zoomed, setZoomed] = useState(false)
 
@@ -20,6 +21,7 @@ export function PortfolioSectionCard({
         display: "grid",
         gridTemplateColumns: zoomed ? "1fr" : "2fr 3fr",
         gap: "30px",
+        direction: alignRight ? "rtl" : "ltr",
       }}
     >
       <Image

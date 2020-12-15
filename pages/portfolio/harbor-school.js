@@ -58,19 +58,26 @@ export default function HarborSchoolPage(props) {
       of tutorial to make the results, and user can find information quickly
       like the blog posts.`}
           />
+
+          <PortfolioSectionCard
+            img={require("../../assets/problem-youtube.png")}
+            title="[Problems] - Education Content Experience"
+            description={`I had to offer CMS(Content Management System) with student's dashboard.`}
+            grayscale
+            alignRight
+          />
+
+          <PortfolioSectionCard
+            img={require("../../assets/solution-video-explorer.gif")}
+            title="[Solution] - Student Management System"
+            description={`And I need to collect latest resources for students. But we had only one
+            junior developer and me with limited time.
+            I started to find the fastest and reliable method for that
+            problem.`}
+            alignRight
+          />
         </div>
       </AnimateSharedLayout>
-
-      {/* Harbor School is education platform for designers.  */}
-      {/* <h4>[Solving Problems using Software] - Student Management System</h4>
-      <p>
-        I had to offer CMS(Content Management System) with student's dashboard.
-        <br />
-        And I need to collect latest resources for students. But we had only one
-        junior developer and me with limited time.
-        <br />I started to find the fastest and reliable method for that
-        problem.
-      </p> */}
     </Layout>
   )
 }
