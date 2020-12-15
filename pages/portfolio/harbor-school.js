@@ -68,7 +68,7 @@ export default function HarborSchoolPage(props) {
           />
 
           <PortfolioSectionCard
-            img={require("../../assets/solution-video-explorer.gif")}
+            img={require("../../assets/solution-students-management.png")}
             title="[Solution] - Student Management System"
             description={`And I need to collect latest resources for students. But we had only one
             junior developer and me with limited time.
