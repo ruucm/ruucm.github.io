@@ -6,7 +6,7 @@ import { removeA } from "../utils/removeA"
 
 export default function Home() {
   const [data, setData] = useState(cardDatas)
-  const [tags, setTags] = useState(["design", "develop", "marketing"])
+  const [tags, setTags] = useState(["develop", "design", "marketing"])
 
   return (
     <Layout home>
@@ -23,22 +23,6 @@ export default function Home() {
           }}
         >
           <em
-            className={`tags ${tags.includes("design") && "active"}`}
-            style={{
-              cursor: "pointer",
-              marginLeft: 10,
-            }}
-            onClick={() =>
-              setTags((prev) =>
-                prev.includes("design")
-                  ? removeA(prev, "design")
-                  : [...prev, "design"]
-              )
-            }
-          >
-            Design
-          </em>
-          <em
             className={`tags ${tags.includes("develop") && "active"}`}
             style={{
               cursor: "pointer",
@@ -53,6 +37,22 @@ export default function Home() {
             }
           >
             Develop
+          </em>
+          <em
+            className={`tags ${tags.includes("design") && "active"}`}
+            style={{
+              cursor: "pointer",
+              marginLeft: 10,
+            }}
+            onClick={() =>
+              setTags((prev) =>
+                prev.includes("design")
+                  ? removeA(prev, "design")
+                  : [...prev, "design"]
+              )
+            }
+          >
+            Design
           </em>
           <em
             className={`tags ${tags.includes("marketing") && "active"}`}
