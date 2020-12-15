@@ -1,5 +1,5 @@
 import { Layout } from "../../components"
-import Link from "next/link"
+import { PortfolioSectionCard } from "../../components/portfolio-section-card"
 
 export default function HarborSchoolPage(props) {
   return (
@@ -28,84 +28,28 @@ export default function HarborSchoolPage(props) {
           class.harbor.school
         </a>
       </p>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "2fr 3fr",
-          gap: "30px",
-          marginBottom: 30,
-        }}
-      >
-        <img
-          src={require("../../assets/portfolio-1.jpeg")}
-          style={{
-            filter: "grayscale(1)",
-            height: "100%",
-            width: "100%",
-            objectFit: "cover",
-            border: "1px solid black",
-          }}
-        />
-        <div
-          style={{
-            // border: "2px dashed black",
-            padding: "30px 15px",
-          }}
-        >
-          <h4
-            style={{
-              textDecoration: "underline",
-            }}
-          >
-            [Problems] - Education Content Experience
-          </h4>
-          I learn programming and design by myself with youtube videos and blog
-          posts. But as a learner's view, there are solid problem on both side.
-          On video side, it is always difficult to jump the point directly you
-          want. If you find a just example line of code, watching video could be
-          terrible experiences. On post side, it is easy to find information but
-          sometimes post author could skip contents that makes students take a
-          ton of times for finding why their project don't excuted like the
-          post.
-        </div>
-      </div>
+      <PortfolioSectionCard
+        img={require("../../assets/portfolio-1.jpeg")}
+        title="[Problems] - Education Content Experience"
+        description={`I learn programming and design by myself with youtube videos and blog
+        posts. But as a learner's view, there are solid problem on both side.
+        On video side, it is always difficult to jump the point directly you
+        want. If you find a just example line of code, watching video could be
+        terrible experiences. On post side, it is easy to find information but
+        sometimes post author could skip contents that makes students take a
+        ton of times for finding why their project don't excuted like the
+        post.`}
+        grayscale
+      />
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "2fr 3fr",
-          gap: "30px",
-        }}
-      >
-        <img
-          src={require("../../assets/portfolio-1.jpeg")}
-          style={{
-            height: "100%",
-            width: "100%",
-            objectFit: "cover",
-            marginBottom: 30,
-            border: "1px solid black",
-          }}
-        />
-        <div
-          style={{
-            padding: "30px 15px",
-          }}
-        >
-          <h4
-            style={{
-              textDecoration: "underline",
-            }}
-          >
-            [Solution] - Video Explorer
-          </h4>
-          So I started develop a new UI called "Video Explorer". I combines good
-          points of video and post at the same time. It includes whole proccess
-          of tutorial to make the results, and user can find information quickly
-          like the blog posts.
-        </div>
-      </div>
-
+      <PortfolioSectionCard
+        img={require("../../assets/portfolio-1.jpeg")}
+        title="[Solution] - Video Explorer"
+        description={`So I started develop a new UI called "Video Explorer". I combines good
+      points of video and post at the same time. It includes whole proccess
+      of tutorial to make the results, and user can find information quickly
+      like the blog posts.`}
+      />
       {/* Harbor School is education platform for designers.  */}
       {/* <h4>[Solving Problems using Software] - Student Management System</h4>
       <p>
