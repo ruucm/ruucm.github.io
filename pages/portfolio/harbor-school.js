@@ -51,7 +51,7 @@ export default function HarborSchoolPage(props) {
           />
 
           <PortfolioSectionCard
-            img={require("../../assets/portfolio-2.jpeg")}
+            img={require("../../assets/solution-video-explorer.gif")}
             title="[Solution] - Video Explorer"
             description={`So I started develop a new UI called "Video Explorer". I combines good
       points of video and post at the same time. It includes whole proccess
