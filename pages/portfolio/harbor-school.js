@@ -60,7 +60,7 @@ export default function HarborSchoolPage(props) {
           />
 
           <PortfolioSectionCard
-            img={require("../../assets/problem-youtube.png")}
+            img={require("../../assets/problem-students-management.png")}
             title="[Problems] - Education Content Experience"
             description={`I had to offer CMS(Content Management System) with student's dashboard.`}
             grayscale
