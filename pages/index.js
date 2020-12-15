@@ -16,13 +16,13 @@ export default function Home() {
         mindset.
       </p>
       <AnimateSharedLayout>
-        {/* <div
+        <div
           style={{
             textAlign: "right",
             marginBottom: 7,
           }}
         >
-          <em
+          {/* <em
             onClick={() => setIsGrid(!isGrid)}
             style={{
               cursor: "pointer",
@@ -39,8 +39,35 @@ export default function Home() {
             }}
           >
             🔀
-          </span>
-        </div> */}
+          </span> */}
+          <em
+            style={{
+              cursor: "pointer",
+              marginLeft: 10,
+              textDecoration: "underline",
+            }}
+          >
+            Design
+          </em>
+          <em
+            style={{
+              cursor: "pointer",
+              marginLeft: 10,
+              textDecoration: "underline",
+            }}
+          >
+            Develop
+          </em>
+          <em
+            style={{
+              cursor: "pointer",
+              marginLeft: 10,
+              textDecoration: "underline",
+            }}
+          >
+            Marketing
+          </em>
+        </div>
 
         <div
           style={{
