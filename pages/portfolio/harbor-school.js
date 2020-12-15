@@ -1,5 +1,6 @@
 import { Layout } from "../../components"
 import { PortfolioSectionCard } from "../../components/portfolio-section-card"
+import { AnimateSharedLayout } from "framer-motion"
 
 export default function HarborSchoolPage(props) {
   return (
@@ -28,16 +29,17 @@ export default function HarborSchoolPage(props) {
           class.harbor.school
         </a>
       </p>
-      <div
-        style={{
-          display: "grid",
-          gap: 30,
-        }}
-      >
-        <PortfolioSectionCard
-          img={require("../../assets/portfolio-1.jpeg")}
-          title="[Problems] - Education Content Experience"
-          description={`I learn programming and design by myself with youtube videos and blog
+      <AnimateSharedLayout>
+        <div
+          style={{
+            display: "grid",
+            gap: 30,
+          }}
+        >
+          <PortfolioSectionCard
+            img={require("../../assets/problem-youtube.png")}
+            title="[Problems] - Education Content Experience"
+            description={`I learn programming and design by myself with youtube videos and blog
         posts. But as a learner's view, there are solid problem on both side.
         On video side, it is always difficult to jump the point directly you
         want. If you find a just example line of code, watching video could be
@@ -45,18 +47,19 @@ export default function HarborSchoolPage(props) {
         sometimes post author could skip contents that makes students take a
         ton of times for finding why their project don't excuted like the
         post.`}
-          grayscale
-        />
+            grayscale
+          />
 
-        <PortfolioSectionCard
-          img={require("../../assets/portfolio-1.jpeg")}
-          title="[Solution] - Video Explorer"
-          description={`So I started develop a new UI called "Video Explorer". I combines good
+          <PortfolioSectionCard
+            img={require("../../assets/portfolio-2.jpeg")}
+            title="[Solution] - Video Explorer"
+            description={`So I started develop a new UI called "Video Explorer". I combines good
       points of video and post at the same time. It includes whole proccess
       of tutorial to make the results, and user can find information quickly
       like the blog posts.`}
-        />
-      </div>
+          />
+        </div>
+      </AnimateSharedLayout>
 
       {/* Harbor School is education platform for designers.  */}
       {/* <h4>[Solving Problems using Software] - Student Management System</h4>
