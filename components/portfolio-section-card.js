@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState } from "react"
 
 export function PortfolioSectionCard({
   img,
@@ -6,11 +7,13 @@ export function PortfolioSectionCard({
   description,
   grayscale = false,
 }) {
+  const [zoomed, setZoomed] = useState(false)
+
   return (
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "2fr 3fr",
+        gridTemplateColumns: zoomed ? "1fr" : "2fr 3fr",
         gap: "30px",
         marginBottom: 30,
       }}
@@ -18,13 +21,15 @@ export function PortfolioSectionCard({
       <img
         src={img}
         style={{
-          height: "100%",
+          height: zoomed ? "initial" : "100%",
           width: "100%",
           objectFit: "cover",
           marginBottom: 30,
           border: "1px solid black",
           filter: grayscale ? "grayscale(1)" : "grayscale(0)",
+          cursor: zoomed ? "zoom-out" : "zoom-in",
         }}
+        onClick={() => setZoomed(!zoomed)}
       />
       <div
         style={{
