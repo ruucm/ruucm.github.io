@@ -12,7 +12,7 @@ export default function Home() {
     <Layout home>
       <h3>Design Engineer</h3>
       <p>
-        Yongmin Ji is an experienced front-end developer with a designer's
+        yongmin ruucm is an experienced front-end developer with a designer's
         mindset.
       </p>
       <AnimateSharedLayout>
@@ -37,7 +37,7 @@ export default function Home() {
               cursor: "pointer",
             }}
           >
-            ⇄
+            ⥂
           </em>
         </div>
 
