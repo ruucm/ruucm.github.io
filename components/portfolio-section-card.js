@@ -15,16 +15,14 @@ export function PortfolioSectionCard({
         display: "grid",
         gridTemplateColumns: zoomed ? "1fr" : "2fr 3fr",
         gap: "30px",
-        marginBottom: 30,
       }}
     >
       <img
         src={img}
         style={{
-          height: zoomed ? "initial" : "100%",
+          height: zoomed ? 300 : "100%",
           width: "100%",
           objectFit: "cover",
-          marginBottom: 30,
           border: "1px solid black",
           filter: grayscale ? "grayscale(1)" : "grayscale(0)",
           cursor: zoomed ? "zoom-out" : "zoom-in",
