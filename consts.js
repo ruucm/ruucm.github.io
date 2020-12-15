@@ -13,7 +13,7 @@ export const cardDatas = [
   },
   {
     title: "Framer Korea",
-    description: ``,
+    description: `Lead Developer (React) / Program Manager`,
     duration: "2018 ~ ",
     outlink: "https://framerkorea.org/",
   },
