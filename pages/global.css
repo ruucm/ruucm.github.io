@@ -16,3 +16,27 @@ body {
 * {
   direction: ltr;
 }
+
+.tags {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+.tags::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.tags.active::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
