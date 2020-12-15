@@ -55,6 +55,8 @@ export function PortfolioSectionCard({
 }
 
 const Image = ({ img, grayscale, zoomed, setZoomed }) => {
+  let filter = ""
+  if (grayscale) filter += "grayscale(1) brightness(0.5)"
   return (
     <div
       style={{
@@ -63,8 +65,8 @@ const Image = ({ img, grayscale, zoomed, setZoomed }) => {
         height: "0",
         paddingTop: "66.66%",
         cursor: zoomed ? "zoom-out" : "zoom-in",
-        filter: grayscale ? "grayscale(1)" : "grayscale(0)",
-        opacity: grayscale ? 0.9 : 1,
+        filter,
+        // opacity: grayscale ? 0.5 : 1,
       }}
     >
       <motion.div
