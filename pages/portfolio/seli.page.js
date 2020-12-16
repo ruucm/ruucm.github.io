@@ -2,6 +2,7 @@ import { Layout } from "../../components"
 import { PortfolioSectionCard } from "./components/portfolio-section-card"
 import { AnimateSharedLayout } from "framer-motion"
 import { Summary } from "./components/summary"
+import { Gallery } from "./components/gallery"
 
 export default function Page(props) {
   return (
@@ -16,54 +17,19 @@ export default function Page(props) {
           },
         ]}
       />
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          marginTop: 30,
-          gap: 30,
-          marginBottom: 30,
-        }}
-      >
-        <img
-          src={require("../../assets/seli_01.png")}
-          style={{
-            width: "100%",
-            display: "block",
-            border: "1px solid black",
-          }}
-        />
-        <img
-          src={require("../../assets/seli_02.png")}
-          style={{
-            width: "100%",
-            display: "block",
-            border: "1px solid black",
-          }}
-        />
-        <img
-          src={require("../../assets/seli_03.png")}
-          style={{
-            width: "100%",
-            display: "block",
-            border: "1px solid black",
-          }}
-        />
-        <img
-          src={require("../../assets/seli_04.png")}
-          style={{
-            width: "100%",
-            display: "block",
-            border: "1px solid black",
-          }}
-        />
-      </div>
+      <Gallery
+        images={[
+          require("../../assets/seli_01.png"),
+          require("../../assets/seli_02.png"),
+          require("../../assets/seli_03.png"),
+          require("../../assets/seli_04.png"),
+        ]}
+      />
       <div
         style={{
           height: 100,
         }}
       />
-
       <AnimateSharedLayout>
         <h4
           style={{
