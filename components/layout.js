@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { useHover } from "../hooks/use-hover"
-import { motion } from "framer-motion"
 
 export function Layout({ children, home = false }) {
   const [hoverRef, isHover] = useHover()
@@ -37,30 +36,7 @@ export function Layout({ children, home = false }) {
           gridTemplateColumns: "4fr 1fr",
         }}
       >
-        <main>
-          {children}
-          <motion.span
-            style={{
-              fontSize: "100px",
-              display: "block",
-              textAlign: "center",
-              margin: "0 auto",
-              width: "100px",
-              height: "100px",
-              lineHeight: "128px",
-            }}
-            animate={{
-              rotate: 360,
-            }}
-            transition={{
-              loop: Infinity,
-              ease: "linear",
-              duration: 60,
-            }}
-          >
-            *
-          </motion.span>
-        </main>
+        <main>{children}</main>
         <footer
           style={{
             WebkitWritingMode: "vertical-rl",
