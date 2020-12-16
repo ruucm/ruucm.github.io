@@ -39,8 +39,9 @@ export default function HarborSchoolPage(props) {
       <AnimateSharedLayout>
         <h4
           style={{
-            marginTop: 0,
             textAlign: "right",
+            fontWeight: 400,
+            color: "blue",
           }}
         >
           Education Content Experience
@@ -74,14 +75,15 @@ export default function HarborSchoolPage(props) {
           />
         </div>
 
-        <h3
+        <h4
           style={{
-            marginTop: 62,
             textAlign: "right",
+            fontWeight: 400,
+            color: "blue",
           }}
         >
           Internal Student Management System
-        </h3>
+        </h4>
         <PortfolioSectionCard
           img={require("../../assets/problem-students-management.png")}
           title="[Problems] - Seperated CRM and Student Managements"
