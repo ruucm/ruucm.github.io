@@ -3,7 +3,7 @@ import { PortfolioSectionCard } from "./portfolio-section-card"
 import { AnimateSharedLayout } from "framer-motion"
 import { Summary } from "./summary"
 
-export default function HarborSchoolPage(props) {
+export default function Page(props) {
   return (
     <Layout>
       <Summary
