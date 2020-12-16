@@ -1,55 +1,25 @@
 import { Layout } from "../../components"
 import { PortfolioSectionCard } from "../../components/portfolio-section-card"
 import { AnimateSharedLayout } from "framer-motion"
+import { Summary } from "./summary"
 
 export default function HarborSchoolPage(props) {
   return (
     <Layout>
-      <div
-        style={{
-          border: "1px solid black",
-          display: "inline-block",
-          padding: "30px 15px",
-        }}
-      >
-        <h3
-          style={{
-            color: "blue",
-            fontWeight: 400,
-            marginTop: 0,
-          }}
-        >
-          Harbor School
-        </h3>
-        <p>Role - Founder/Developer</p>
-        <p
-          style={{
-            marginBottom: 0,
-          }}
-        >
-          Link -{" "}
-          <a
-            href="https://harbor.school"
-            target="_blank"
-            style={{
-              color: "black",
-            }}
-          >
-            harbor.school
-          </a>{" "}
-          /{" "}
-          <a
-            href="https://class.harbor.school"
-            target="_blank"
-            style={{
-              color: "black",
-            }}
-          >
-            class.harbor.school
-          </a>
-        </p>
-      </div>
-
+      <Summary
+        title="Harbor School"
+        role="Founder/Developer"
+        links={[
+          {
+            text: "harbor.school",
+            href: "https://harbor.school",
+          },
+          {
+            text: "class.harbor.school",
+            href: "https://class.harbor.school",
+          },
+        ]}
+      />
       <AnimateSharedLayout>
         <h4
           style={{
