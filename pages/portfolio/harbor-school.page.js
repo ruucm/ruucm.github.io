@@ -1,7 +1,7 @@
 import { Layout } from "../../components"
-import { PortfolioSectionCard } from "./portfolio-section-card"
+import { PortfolioSectionCard } from "./components/portfolio-section-card"
 import { AnimateSharedLayout } from "framer-motion"
-import { Summary } from "./summary"
+import { Summary } from "./components/summary"
 
 export default function HarborSchoolPage(props) {
   return (
