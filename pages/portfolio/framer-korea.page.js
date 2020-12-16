@@ -11,11 +11,11 @@ export default function Page(props) {
         role="Developer / Motion Designer"
         links={[
           {
-            text: "2019 Meetup",
+            text: "2019 Meetup Website",
             href: "https://framerkorea.org/are-you-having-fun/",
           },
           {
-            text: "2020 Meetup",
+            text: "2020 Meetup Website",
             href: "https://framerkorea.org",
           },
         ]}

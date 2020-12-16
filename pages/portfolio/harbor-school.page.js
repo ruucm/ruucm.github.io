@@ -12,7 +12,7 @@ export default function HarborSchoolPage(props) {
         links={[
           {
             text: "harbor.school",
-            href: "https://harbor.school",
+            href: "https://beta.harbor.school",
           },
           {
             text: "class.harbor.school",

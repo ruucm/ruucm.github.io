@@ -3,7 +3,7 @@ export const cardDatas = [
     title: "Lighthouse Design System",
     description: `Open-sourced Design System solution to re-invent designing and developing workflows.`,
     duration: "2020 ~ ",
-    outlink: "https://lighthouse.harbor.school",
+    link: "/portfolio/lighthouse-design-system",
     tags: ["design", "develop"],
   },
   {
@@ -24,21 +24,21 @@ export const cardDatas = [
     title: "SELI Magazine using Notion as CMS.",
     description: `Developed whole website (React + Python + Github CI)`,
     duration: "Oct 2020 ~ Dec 2020",
-    link: "/portfolio/freelance-works",
+    link: "/portfolio/seli",
     tags: ["develop"],
   },
   {
     title: "Pulsen - Motion based Chatbot",
     description: `Developed whole website (React + Framer)`,
     duration: "Mar 2019 - May 2019",
-    link: "/portfolio/freelance-works",
+    link: "/portfolio/pulsen",
     tags: ["develop"],
   },
   {
     title: "Cnyttan - Online Shopping Site",
     description: `Developed whole website (Wordpress + React)`,
     duration: "Oct 2018 - Nov 2018",
-    link: "/portfolio/freelance-works",
+    link: "/portfolio/cnyttan",
     tags: ["develop"],
   },
   // {
