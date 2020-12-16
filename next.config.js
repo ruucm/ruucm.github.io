@@ -18,4 +18,5 @@ module.exports = withImages({
 
     return config
   },
+  pageExtensions: ["page.js", "page.jsx"],
 })
