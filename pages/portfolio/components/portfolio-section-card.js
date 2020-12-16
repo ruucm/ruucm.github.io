@@ -77,7 +77,7 @@ const Image = ({ img, grayscale, zoomed, setZoomed }) => {
       />
       <motion.img
         src={img}
-        alt="Bimhuis in Amsterdam"
+        alt=""
         onClick={() => setZoomed(!zoomed)}
         layout
         transition={defaultTransition}

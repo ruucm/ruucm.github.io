@@ -17,6 +17,44 @@ export default function Page(props) {
         ]}
       />
       <AnimateSharedLayout>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            marginTop: 30,
+            // gap: 20,
+          }}
+        >
+          <img
+            src={require("../../assets/seli_01.png")}
+            style={{
+              width: "100%",
+              display: "block",
+            }}
+          />
+          <img
+            src={require("../../assets/seli_02.png")}
+            style={{
+              width: "100%",
+              display: "block",
+            }}
+          />
+          <img
+            src={require("../../assets/seli_03.png")}
+            style={{
+              width: "100%",
+              display: "block",
+            }}
+          />
+          <img
+            src={require("../../assets/seli_04.png")}
+            style={{
+              width: "100%",
+              display: "block",
+            }}
+          />
+        </div>
+
         <h4
           style={{
             textAlign: "right",
