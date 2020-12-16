@@ -1,6 +1,6 @@
 import * as React from "react"
-import { useState, useRef } from "react"
-import { motion, useDomEvent } from "framer-motion"
+import { useState } from "react"
+import { motion } from "framer-motion"
 
 const defaultTransition = {
   duration: 0.36,

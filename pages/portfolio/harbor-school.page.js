@@ -1,5 +1,5 @@
 import { Layout } from "../../components"
-import { PortfolioSectionCard } from "../../components/portfolio-section-card"
+import { PortfolioSectionCard } from "./portfolio-section-card"
 import { AnimateSharedLayout } from "framer-motion"
 import { Summary } from "./summary"
 
