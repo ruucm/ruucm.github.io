@@ -19,6 +19,7 @@ export function Card({ title, duration, description, outlink, link }) {
       }}
       style={{
         display: "inline-block",
+        // background: "hsla(0, 0%, 100%, 0.4)",
       }}
     >
       <motion.div
@@ -45,11 +46,23 @@ export function Card({ title, duration, description, outlink, link }) {
         <p>{description}</p>
         {link && (
           <Link href={link}>
-            <a>More</a>
+            <a
+              style={{
+                textDecoration: "none",
+              }}
+            >
+              More
+            </a>
           </Link>
         )}
         {!link && (
-          <a href={outlink} target="_blank">
+          <a
+            href={outlink}
+            target="_blank"
+            style={{
+              textDecoration: "none",
+            }}
+          >
             More (outlink)
           </a>
         )}

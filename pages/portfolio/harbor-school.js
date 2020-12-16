@@ -5,7 +5,13 @@ import { AnimateSharedLayout } from "framer-motion"
 export default function HarborSchoolPage(props) {
   return (
     <Layout>
-      <h3>Harbor School</h3>
+      <h3
+        style={{
+          color: "blue",
+        }}
+      >
+        Harbor School
+      </h3>
       <p>Role - Founder/Developer</p>
       <p>
         Link -{" "}
