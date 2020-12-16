@@ -79,7 +79,7 @@ export const cardDatas = [
   },
   {
     title: "Cnyttan - Online Shopping Site",
-    description: `Developed whole website (Wordpress + React)`,
+    description: `Developed whole website (Wordpress + PHP + React). I handled whole WordPress shopping functions (cart, checkout, refund, membership, shipping) as REST API for making dynamic checkout front page with React.`,
     duration: "Oct 2018 - Nov 2018",
     slug: "cnyttan",
     tags: ["develop"],
