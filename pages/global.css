@@ -5,12 +5,12 @@ body {
 ::-moz-selection {
   /* Code for Firefox */
   color: white;
-  background: rgba(0, 0, 255, 0.99);
+  background: rgba(0, 0, 255, 0.9);
 }
 
 ::selection {
   color: white;
-  background: rgba(0, 0, 255, 0.99);
+  background: rgba(0, 0, 255, 0.9);
 }
 
 * {
