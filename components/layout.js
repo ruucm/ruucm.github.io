@@ -44,13 +44,22 @@ export function Layout({ children, home = false }) {
             writingMode: "vertical-rl",
           }}
         >
-          <a href="http://twitter.com/ruucm" target="_blank">
-            ruucm.a@gmail.com
-          </a>
-          <br />
-          <a href="http://twitter.com/ruucm" target="_blank">
-            @ruucm
-          </a>
+          <div
+            style={{
+              position: "sticky",
+              top: "10vh",
+              display: "inline-block",
+            }}
+          >
+            <a href="http://twitter.com/ruucm" target="_blank">
+              ruucm.a@gmail.com
+            </a>
+            <br />
+            <a href="http://twitter.com/ruucm" target="_blank">
+              @ruucm
+            </a>
+          </div>
+
           {/* <br /> */}
           {/* Navigation */}
           {/* <nav>
