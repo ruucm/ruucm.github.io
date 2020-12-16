@@ -68,12 +68,11 @@ export function Card({ title, duration, description, outlink, link, tags }) {
             More (outlink)
           </a>
         )}
-        <div
+        <em
           style={{
             position: "absolute",
-            // background: "green",
             right: 15,
-            bottom: 7,
+            bottom: 8,
           }}
         >
           {tags.map((tag, id) => (
@@ -82,7 +81,7 @@ export function Card({ title, duration, description, outlink, link, tags }) {
               {id < tags.length - 1 && ","}{" "}
             </span>
           ))}
-        </div>
+        </em>
       </motion.div>
     </motion.div>
   )
