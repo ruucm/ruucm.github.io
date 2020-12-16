@@ -16,45 +16,55 @@ export default function Page(props) {
           },
         ]}
       />
-      <AnimateSharedLayout>
-        <div
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          marginTop: 30,
+          gap: 30,
+          marginBottom: 30,
+        }}
+      >
+        <img
+          src={require("../../assets/seli_01.png")}
           style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            marginTop: 30,
-            // gap: 20,
+            width: "100%",
+            display: "block",
+            border: "1px solid black",
           }}
-        >
-          <img
-            src={require("../../assets/seli_01.png")}
-            style={{
-              width: "100%",
-              display: "block",
-            }}
-          />
-          <img
-            src={require("../../assets/seli_02.png")}
-            style={{
-              width: "100%",
-              display: "block",
-            }}
-          />
-          <img
-            src={require("../../assets/seli_03.png")}
-            style={{
-              width: "100%",
-              display: "block",
-            }}
-          />
-          <img
-            src={require("../../assets/seli_04.png")}
-            style={{
-              width: "100%",
-              display: "block",
-            }}
-          />
-        </div>
+        />
+        <img
+          src={require("../../assets/seli_02.png")}
+          style={{
+            width: "100%",
+            display: "block",
+            border: "1px solid black",
+          }}
+        />
+        <img
+          src={require("../../assets/seli_03.png")}
+          style={{
+            width: "100%",
+            display: "block",
+            border: "1px solid black",
+          }}
+        />
+        <img
+          src={require("../../assets/seli_04.png")}
+          style={{
+            width: "100%",
+            display: "block",
+            border: "1px solid black",
+          }}
+        />
+      </div>
+      <div
+        style={{
+          height: 100,
+        }}
+      />
 
+      <AnimateSharedLayout>
         <h4
           style={{
             textAlign: "right",
