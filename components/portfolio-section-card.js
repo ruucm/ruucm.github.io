@@ -39,6 +39,7 @@ export function PortfolioSectionCard({
           style={{
             textDecoration: "underline",
             display: "inline-block",
+            fontWeight: 400,
           }}
           layout
           transition={defaultTransition}
