@@ -2,7 +2,7 @@ import * as React from "react"
 import { useRouter } from "next/router"
 import { cardDatas } from "../../../consts"
 
-export function Summary({ role, links }) {
+export function Summary() {
   const router = useRouter()
   const slug = router.pathname.split("/")[2]
   const data = findValueByKey(cardDatas, "slug", slug)
@@ -24,14 +24,10 @@ export function Summary({ role, links }) {
       >
         {data.title} ({data.duration})
       </h3>
-      <p>Role - {role}</p>
-      <p
-        style={{
-          marginBottom: 0,
-        }}
-      >
+      <p>Role - {data.role}</p>
+      <p>
         Links -{" "}
-        {links.map((link, id) => (
+        {data.links.map((link, id) => (
           <span key={id}>
             <a
               href={link.href}
@@ -42,9 +38,16 @@ export function Summary({ role, links }) {
             >
               {link.text}
             </a>
-            {id < links.length - 1 && ` / `}
+            {id < data.links.length - 1 && ` / `}
           </span>
         ))}
+      </p>
+      <p
+        style={{
+          marginBottom: 0,
+        }}
+      >
+        {data.description}
       </p>
     </div>
   )

@@ -5,6 +5,13 @@ export const cardDatas = [
     duration: "2020 ~ ",
     slug: "lighthouse-design-system",
     tags: ["design", "develop"],
+    role: "Developer / System Designer",
+    links: [
+      {
+        text: "Website",
+        href: "https://lighthouse.harbor.school",
+      },
+    ],
   },
   {
     title: "Harbor School",
@@ -12,6 +19,17 @@ export const cardDatas = [
     duration: "2018 ~ 2020",
     slug: "harbor-school",
     tags: ["develop", "marketing"],
+    role: "Founder/Developer",
+    links: [
+      {
+        text: "harbor.school",
+        href: "https://beta.harbor.school",
+      },
+      {
+        text: "class.harbor.school",
+        href: "https://class.harbor.school",
+      },
+    ],
   },
   {
     title: "Framer Korea",
@@ -19,6 +37,17 @@ export const cardDatas = [
     duration: "2018 ~ ",
     slug: "framer-korea",
     tags: ["develop", "design"],
+    role: "Developer / Motion Designer",
+    links: [
+      {
+        text: "2019 Meetup Website",
+        href: "https://framerkorea.org/are-you-having-fun/",
+      },
+      {
+        text: "2020 Meetup Website",
+        href: "https://framerkorea.org",
+      },
+    ],
   },
   {
     title: "Seoul Lifelong Education Institute (SLEI) Magazine",
@@ -26,6 +55,13 @@ export const cardDatas = [
     duration: "Oct 2020 ~ Dec 2020",
     slug: "seli",
     tags: ["develop"],
+    role: "Developer",
+    links: [
+      {
+        text: "Website",
+        href: "https://smile.seoul.kr/magazine",
+      },
+    ],
   },
   {
     title: "Pulsen - Motion based Chatbot",
@@ -33,6 +69,13 @@ export const cardDatas = [
     duration: "Mar 2019 - May 2019",
     slug: "pulsen",
     tags: ["develop"],
+    role: "Developer",
+    links: [
+      {
+        text: "Demo",
+        href: "https://pulsen.netlify.app/?token=demo",
+      },
+    ],
   },
   {
     title: "Cnyttan - Online Shopping Site",
@@ -40,6 +83,13 @@ export const cardDatas = [
     duration: "Oct 2018 - Nov 2018",
     slug: "cnyttan",
     tags: ["develop"],
+    role: "Developer",
+    links: [
+      {
+        text: "Website",
+        href: "https://cnyttan.com",
+      },
+    ],
   },
   // {
   //   title: "freelance works",

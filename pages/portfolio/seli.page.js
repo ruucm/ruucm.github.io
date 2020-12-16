@@ -7,15 +7,7 @@ import { Gallery } from "./components/gallery"
 export default function Page(props) {
   return (
     <Layout>
-      <Summary
-        role="Developer"
-        links={[
-          {
-            text: "Website",
-            href: "https://smile.seoul.kr/magazine",
-          },
-        ]}
-      />
+      <Summary />
       <Gallery
         images={[
           require("../../assets/seli_01.png"),

@@ -6,15 +6,7 @@ import { Summary } from "./components/summary"
 export default function Page(props) {
   return (
     <Layout>
-      <Summary
-        role="Developer"
-        links={[
-          {
-            text: "Website",
-            href: "https://cnyttan.com",
-          },
-        ]}
-      />
+      <Summary />
     </Layout>
   )
 }

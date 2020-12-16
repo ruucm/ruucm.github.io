@@ -6,19 +6,7 @@ import { Summary } from "./components/summary"
 export default function Page(props) {
   return (
     <Layout>
-      <Summary
-        role="Developer / Motion Designer"
-        links={[
-          {
-            text: "2019 Meetup Website",
-            href: "https://framerkorea.org/are-you-having-fun/",
-          },
-          {
-            text: "2020 Meetup Website",
-            href: "https://framerkorea.org",
-          },
-        ]}
-      />
+      <Summary />
       <AnimateSharedLayout>
         <h4
           style={{

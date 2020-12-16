@@ -6,19 +6,7 @@ import { Summary } from "./components/summary"
 export default function HarborSchoolPage(props) {
   return (
     <Layout>
-      <Summary
-        role="Founder/Developer"
-        links={[
-          {
-            text: "harbor.school",
-            href: "https://beta.harbor.school",
-          },
-          {
-            text: "class.harbor.school",
-            href: "https://class.harbor.school",
-          },
-        ]}
-      />
+      <Summary />
       <AnimateSharedLayout>
         <h4
           style={{
