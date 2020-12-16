@@ -101,7 +101,19 @@ export const cardDatas = [
     title: "vincent project",
     description: ``,
     duration: "2014 ~ 2016",
-    outlink: "https://www.instagram.com/vincent.project/",
+    // outlink: "https://www.instagram.com/vincent.project/",
+    slug: "vincent-project",
     tags: ["design", "develop"],
+    role: "Developer / Program Manager",
+    links: [
+      {
+        text: "Instagram",
+        href: "https://www.instagram.com/vincent.project/",
+      },
+      {
+        text: "Website",
+        href: "https://vincentproject.netlify.app/",
+      },
+    ],
   },
 ]
