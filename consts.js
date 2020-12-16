@@ -17,8 +17,8 @@ export const cardDatas = [
     title: "Framer Korea",
     description: `Lead Developer (React) / Program Manager`,
     duration: "2018 ~ ",
-    outlink: "https://framerkorea.org/",
-    tags: ["develop"],
+    link: "/portfolio/framer-korea",
+    tags: ["develop", "design"],
   },
   {
     title: "SELI Magazine using Notion as CMS.",
