@@ -5,37 +5,51 @@ import { AnimateSharedLayout } from "framer-motion"
 export default function HarborSchoolPage(props) {
   return (
     <Layout>
-      <h3
+      <div
         style={{
-          color: "blue",
-          fontWeight: 400,
+          border: "1px solid black",
+          display: "inline-block",
+          padding: "30px 15px",
         }}
       >
-        Harbor School
-      </h3>
-      <p>Role - Founder/Developer</p>
-      <p>
-        Link -{" "}
-        <a
-          href="https://harbor.school"
-          target="_blank"
+        <h3
           style={{
-            color: "black",
+            color: "blue",
+            fontWeight: 400,
+            marginTop: 0,
           }}
         >
-          harbor.school
-        </a>{" "}
-        /{" "}
-        <a
-          href="https://class.harbor.school"
-          target="_blank"
+          Harbor School
+        </h3>
+        <p>Role - Founder/Developer</p>
+        <p
           style={{
-            color: "black",
+            marginBottom: 0,
           }}
         >
-          class.harbor.school
-        </a>
-      </p>
+          Link -{" "}
+          <a
+            href="https://harbor.school"
+            target="_blank"
+            style={{
+              color: "black",
+            }}
+          >
+            harbor.school
+          </a>{" "}
+          /{" "}
+          <a
+            href="https://class.harbor.school"
+            target="_blank"
+            style={{
+              color: "black",
+            }}
+          >
+            class.harbor.school
+          </a>
+        </p>
+      </div>
+
       <AnimateSharedLayout>
         <h4
           style={{
@@ -63,7 +77,7 @@ export default function HarborSchoolPage(props) {
         sometimes post author could skip contents that makes students take a
         ton of times for finding why their project don't excuted like the
         post.`}
-            grayscale
+            // grayscale
           />
           <PortfolioSectionCard
             img={require("../../assets/solution-video-explorer.gif")}
@@ -84,23 +98,30 @@ export default function HarborSchoolPage(props) {
         >
           Internal Student Management System
         </h4>
-        <PortfolioSectionCard
-          img={require("../../assets/problem-students-management.png")}
-          title="[Problems] - Seperated CRM and Student Managements"
-          description={`I had to offer CMS(Content Management System) with student's dashboard.`}
-          grayscale
-          // alignRight
-        />
+        <div
+          style={{
+            display: "grid",
+            gap: 30,
+          }}
+        >
+          <PortfolioSectionCard
+            img={require("../../assets/problem-students-management.png")}
+            title="[Problems] - Seperated CRM and Student Managements"
+            description={`I had to offer CMS(Content Management System) with student's dashboard.`}
+            // grayscale
+            // alignRight
+          />
 
-        <PortfolioSectionCard
-          img={require("../../assets/solution-students-management.png")}
-          title="[Solution] - Student Management System"
-          description={`And I need to collect latest resources for students. But we had only one
+          <PortfolioSectionCard
+            img={require("../../assets/solution-students-management.png")}
+            title="[Solution] - Student Management System"
+            description={`And I need to collect latest resources for students. But we had only one
             junior developer and me with limited time.
             I started to find the fastest and reliable method for that
             problem.`}
-          // alignRight
-        />
+            // alignRight
+          />
+        </div>
       </AnimateSharedLayout>
     </Layout>
   )
