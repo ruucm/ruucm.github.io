@@ -10,7 +10,7 @@ const wrap = {
   },
 }
 
-export function Card({ title, duration, description, outlink, link, tags }) {
+export function Card({ title, duration, description, outlink, slug, tags }) {
   return (
     <motion.div
       layoutId={title}
@@ -46,8 +46,8 @@ export function Card({ title, duration, description, outlink, link, tags }) {
           {duration && ` (${duration})`}
         </h4>
         <p>{description}</p>
-        {link && (
-          <Link href={link}>
+        {slug && (
+          <Link href={`/portfolio/${slug}`}>
             <a
               style={{
                 textDecoration: "none",
@@ -57,7 +57,7 @@ export function Card({ title, duration, description, outlink, link, tags }) {
             </a>
           </Link>
         )}
-        {!link && (
+        {!slug && (
           <a
             href={outlink}
             target="_blank"

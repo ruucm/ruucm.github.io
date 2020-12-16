@@ -7,7 +7,6 @@ export default function Page(props) {
   return (
     <Layout>
       <Summary
-        title="Cnyttan - Online Shopping Site"
         role="Developer"
         links={[
           {

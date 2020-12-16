@@ -7,7 +7,6 @@ export default function HarborSchoolPage(props) {
   return (
     <Layout>
       <Summary
-        title="Harbor School"
         role="Founder/Developer"
         links={[
           {

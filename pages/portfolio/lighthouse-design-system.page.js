@@ -7,7 +7,6 @@ export default function Page(props) {
   return (
     <Layout>
       <Summary
-        title="Lighthouse Design System"
         role="Developer / System Designer"
         links={[
           {

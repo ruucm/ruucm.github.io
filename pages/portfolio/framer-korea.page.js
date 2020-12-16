@@ -7,7 +7,6 @@ export default function Page(props) {
   return (
     <Layout>
       <Summary
-        title="Framer Korea"
         role="Developer / Motion Designer"
         links={[
           {

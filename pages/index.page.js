@@ -87,7 +87,8 @@ export default function Home() {
                   duration={item.duration}
                   description={item.description}
                   outlink={item.outlink}
-                  link={item.link}
+                  slug={item.slug}
+                  // link={item.key && `/portfolio/${item.key}`}
                   tags={item.tags}
                 />
               )}

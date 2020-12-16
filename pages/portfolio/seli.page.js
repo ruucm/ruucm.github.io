@@ -8,7 +8,6 @@ export default function Page(props) {
   return (
     <Layout>
       <Summary
-        title="Seoul Lifelong Education Institute (SLEI)"
         role="Developer"
         links={[
           {
