@@ -68,6 +68,21 @@ export function Layout({ children, home = false }) {
             </ul>
           </nav> */}
         </footer>
+        <div
+          style={{
+            height: "10vh",
+          }}
+        />
+        <div
+          style={{
+            background: "blue",
+            position: "fixed",
+            left: 0,
+            bottom: 0,
+            width: "100%",
+            height: "10vh",
+          }}
+        />
       </div>
     </>
   )

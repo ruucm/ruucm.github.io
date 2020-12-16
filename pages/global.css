@@ -15,6 +15,7 @@ body {
 
 * {
   direction: ltr;
+  /* font-family: Georgia; */
 }
 
 .tags {
