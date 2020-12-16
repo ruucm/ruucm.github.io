@@ -10,17 +10,18 @@ const wrap = {
   },
 }
 
-export function Card({ title, duration, description, outlink, link }) {
+export function Card({ title, duration, description, outlink, link, tags }) {
   return (
     <motion.div
       layoutId={title}
       transition={{
         duration: 0.36,
       }}
-      style={{
-        display: "inline-block",
-        // background: "hsla(0, 0%, 100%, 0.4)",
-      }}
+      style={
+        {
+          // background: "hsla(0, 0%, 100%, 0.4)",
+        }
+      }
     >
       <motion.div
         initial={wrap.inActive}
@@ -30,6 +31,7 @@ export function Card({ title, duration, description, outlink, link }) {
           duration: 0.36,
         }}
         style={{
+          position: "relative",
           border: "1px solid black",
           padding: "30px 15px",
         }}
@@ -66,6 +68,21 @@ export function Card({ title, duration, description, outlink, link }) {
             More (outlink)
           </a>
         )}
+        <div
+          style={{
+            position: "absolute",
+            // background: "green",
+            right: 15,
+            bottom: 7,
+          }}
+        >
+          {tags.map((tag, id) => (
+            <span key={id}>
+              {tag}
+              {id < tags.length - 1 && ","}{" "}
+            </span>
+          ))}
+        </div>
       </motion.div>
     </motion.div>
   )

@@ -88,6 +88,7 @@ export default function Home() {
                   description={item.description}
                   outlink={item.outlink}
                   link={item.link}
+                  tags={item.tags}
                 />
               )}
             </AnimatePresence>
