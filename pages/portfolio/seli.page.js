@@ -39,24 +39,14 @@ export default function Page(props) {
         >
           <PortfolioSectionCard
             img={require("../../assets/seli-cms-problem.png")}
-            title="[Problems] - Bad Education Content Experience"
-            description={`I learn programming and design by myself with youtube videos and blog
-        posts. But as a learner's view, there are solid problem on both side.
-        On video side, it is always difficult to jump the point directly you
-        want. If you find a just example line of code, watching video could be
-        terrible experiences. On post side, it is easy to find information but
-        sometimes post author could skip contents that makes students take a
-        ton of times for finding why their project don't excuted like the
-        post.`}
+            title="[Problems] - There are no excellent editors for Web projects."
+            description={`When developing web projects from scratch, there is only an old WYSIWYG editor for the admin side. I think it could be progressed.`}
             // grayscale
           />
           <PortfolioSectionCard
             img={require("../../assets/seli-cms-notion.png")}
-            title="[Solution] - Video Explorer"
-            description={`So I started develop a new UI called "Video Explorer". I combines good
-      points of video and post at the same time. It includes whole proccess
-      of tutorial to make the results, and user can find information quickly
-      like the blog posts.`}
+            title="[Solution] - Use Notion as CMS(Content Management System)"
+            description={`I've seen many people use Notion(notion.so) as their daily notes, blogs, portfolios, even for job postings. And it has a straightforward block-style editing system. It seems much better it linked to the front-end, but there was no official API yet (2020). So I decided to develop my own for this project. I used Github CI (Continous Integration) to link changes from Notion to the website. Python3 was also a good choice for getting Notion contents and performances.`}
           />
         </div>
       </AnimateSharedLayout>

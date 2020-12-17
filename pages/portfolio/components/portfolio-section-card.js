@@ -47,7 +47,13 @@ export function PortfolioSectionCard({
           {title}
         </motion.h4>
         <br />
-        <motion.p layout transition={defaultTransition}>
+        <motion.p
+          layout
+          transition={defaultTransition}
+          style={{
+            lineHeight: "1.55em",
+          }}
+        >
           {description}
         </motion.p>
       </div>
