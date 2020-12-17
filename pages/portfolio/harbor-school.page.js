@@ -64,7 +64,7 @@ export default function HarborSchoolPage(props) {
           <PortfolioSectionCard
             img={require("../../assets/problem-students-management.png")}
             title="[Problems] - Seperated CRM and Student Managements"
-            description={`I had to offer CMS(Content Management System) with student's dashboard.`}
+            description={`I had to offer CRM(Customer relationship management) with student's achievement dashboard.`}
             // grayscale
             // alignRight
           />
