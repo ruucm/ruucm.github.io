@@ -1,10 +1,28 @@
 import * as React from "react"
 import { useState } from "react"
 import { motion } from "framer-motion"
+import styled, { css } from "styled-components"
 
 const defaultTransition = {
   duration: 0.36,
 }
+
+const GridWrap = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 30px;
+  direction: ltr;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  ${({ zoomed }) =>
+    zoomed &&
+    css`
+      grid-template-columns: 1fr;
+    `}
+`
 
 export function PortfolioSectionCard({
   img,
@@ -16,14 +34,7 @@ export function PortfolioSectionCard({
   const [zoomed, setZoomed] = useState(false)
 
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: zoomed ? "1fr" : "2fr 3fr",
-        gap: "30px",
-        direction: alignRight ? "rtl" : "ltr",
-      }}
-    >
+    <GridWrap>
       <Image
         img={img}
         grayscale={grayscale}
@@ -57,7 +68,7 @@ export function PortfolioSectionCard({
           {description}
         </motion.p>
       </div>
-    </div>
+    </GridWrap>
   )
 }
 
