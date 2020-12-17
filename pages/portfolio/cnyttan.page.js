@@ -16,6 +16,11 @@ export default function Page(props) {
           require("../../assets/cynttan_04.png"),
         ]}
       />
+      <p>
+        I handled whole WordPress shopping functions (cart, checkout, refund,
+        membership, shipping) as REST API for making dynamic checkout front page
+        with React.
+      </p>
     </Layout>
   )
 }

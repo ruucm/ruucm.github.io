@@ -45,16 +45,7 @@ export function Card({ title, duration, description, outlink, slug, tags }) {
           {title}
           {duration && ` (${duration})`}
         </h4>
-        <p
-          style={{
-            width: "50%",
-            whiteSpace: "nowrap",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-          }}
-        >
-          {description}
-        </p>
+        <p>{description}</p>
         {slug && (
           <Link href={`/portfolio/${slug}`}>
             <a
