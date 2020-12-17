@@ -24,6 +24,14 @@ const GridWrap = styled.div`
     `}
 `
 
+const Description = styled.div`
+  padding: 30px 15px;
+
+  @media (max-width: 768px) {
+    padding-top: 0px;
+  }
+`
+
 export function PortfolioSectionCard({
   img,
   title,
@@ -41,11 +49,7 @@ export function PortfolioSectionCard({
         zoomed={zoomed}
         setZoomed={setZoomed}
       />
-      <div
-        style={{
-          padding: "30px 15px",
-        }}
-      >
+      <Description>
         <motion.h4
           style={{
             textDecoration: "underline",
@@ -67,7 +71,7 @@ export function PortfolioSectionCard({
         >
           {description}
         </motion.p>
-      </div>
+      </Description>
     </GridWrap>
   )
 }
