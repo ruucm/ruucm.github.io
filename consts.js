@@ -19,7 +19,7 @@ export const cardDatas = [
     duration: "2018 ~ 2020",
     slug: "harbor-school",
     tags: ["develop", "marketing"],
-    role: "Founder/Developer",
+    role: "Founder / Developer / Instructor",
     links: [
       {
         text: "harbor.school",
