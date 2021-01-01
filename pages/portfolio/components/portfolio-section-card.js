@@ -42,7 +42,7 @@ export function PortfolioSectionCard({
   const [zoomed, setZoomed] = useState(false)
 
   return (
-    <GridWrap>
+    <GridWrap zoomed={zoomed}>
       <Image
         img={img}
         grayscale={grayscale}
