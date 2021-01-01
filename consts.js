@@ -99,7 +99,7 @@ export const cardDatas = [
   // },
   {
     title: "vincent project",
-    description: ``,
+    description: `Developed whole website (Wordpress + CSS).`,
     duration: "2014 ~ 2016",
     // outlink: "https://www.instagram.com/vincent.project/",
     slug: "vincent-project",
