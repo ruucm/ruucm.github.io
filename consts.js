@@ -41,7 +41,7 @@ export const cardDatas = [
     links: [
       {
         text: "2019 Meetup Website",
-        href: "https://framerkorea.org/are-you-having-fun/",
+        href: "https://framerkorea.org/en/are-you-having-fun/",
       },
       {
         text: "2020 Meetup Website",
