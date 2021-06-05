@@ -16,7 +16,7 @@ export const cardDatas = [
   {
     title: "Harbor School",
     description: `As the founder of Harbor School, I learned how software impacts people and society and markets.`,
-    duration: "2018 ~ 2020",
+    duration: "2018 ~ ",
     slug: "harbor-school",
     tags: ["develop", "marketing"],
     role: "Founder / Developer / Instructor",
