@@ -1,4 +1,4 @@
-import { R as ReactDOM } from "./vendor.3a8a9d33.js";
+import { R as ReactDOM } from "./vendor.dbc1cc3e.js";
 let scriptRel;
 const seen = {};
 const __vitePreload = function preload(baseModule, deps) {
@@ -35,7 +35,7 @@ const __vitePreload = function preload(baseModule, deps) {
   })).then(() => baseModule());
 };
 var index = 'body {\n  background: hsl(0, 0%, 76%);\n}\n\n::-moz-selection {\n  /* Code for Firefox */\n  color: white;\n  background: rgba(0, 0, 255, 0.9);\n}\n\n::selection {\n  color: white;\n  background: rgba(0, 0, 255, 0.9);\n}\n\n* {\n  direction: ltr;\n  /* font-family: Georgia; */\n  font-family: Arial;\n}\n\n.tags {\n  position: relative;\n  color: #000;\n  text-decoration: none;\n}\n\n.tags::before {\n  content: "";\n  position: absolute;\n  width: 100%;\n  height: 1px;\n  bottom: 0;\n  left: 0;\n  background-color: blue;\n  visibility: hidden;\n  transform: scaleX(0);\n  transition: all 0.3s ease-in-out 0s;\n}\n\n.tags.active::before {\n  visibility: visible;\n  transform: scaleX(1);\n}\n';
-__vitePreload(() => import("./imports.26c8b086.js"), true ? ["/assets/imports.26c8b086.js","/assets/vendor.3a8a9d33.js"] : void 0).then(async (m) => {
-  const App = (await __vitePreload(() => import("./App.bac0dc48.js"), true ? ["/assets/App.bac0dc48.js","/assets/vendor.3a8a9d33.js"] : void 0)).default;
+__vitePreload(() => import("./imports.10c405dc.js"), true ? ["/assets/imports.10c405dc.js","/assets/vendor.dbc1cc3e.js"] : void 0).then(async (m) => {
+  const App = (await __vitePreload(() => import("./App.b5dc6e36.js"), true ? ["/assets/App.b5dc6e36.js","/assets/vendor.dbc1cc3e.js"] : void 0)).default;
   ReactDOM.render(/* @__PURE__ */ React.createElement(React.StrictMode, null, /* @__PURE__ */ React.createElement(App, null)), document.getElementById("root"));
 });
