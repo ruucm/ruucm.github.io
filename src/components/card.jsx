@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
-
 import { motion } from "framer-motion"
+import { Button } from "https://framerusercontent.com/modules/9yCP42jHRUKb7D1zVIaf/D19x3J7yt8o0t0SYRaJY/Button.js"
 
 const wrap = {
   active: {
@@ -54,7 +54,8 @@ export function Card({ title, duration, description, outlink, slug, tags }) {
               textDecoration: "none",
             }}
           >
-            More
+            <Button text="More" />
+            {/* More */}
           </Link>
         )}
         {!slug && (
