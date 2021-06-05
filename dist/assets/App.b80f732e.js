@@ -1,4 +1,5 @@
 import { a as React$1, r as react } from "./vendor.dbc1cc3e.js";
+import { Button } from "https://framerusercontent.com/modules/9yCP42jHRUKb7D1zVIaf/D19x3J7yt8o0t0SYRaJY/Button.js";
 function _setPrototypeOf(o, p2) {
   _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf2(o2, p3) {
     o2.__proto__ = p3;
@@ -7846,7 +7847,9 @@ function Card({ title, duration, description, outlink, slug, tags }) {
     style: {
       textDecoration: "none"
     }
-  }, "More"), !slug && /* @__PURE__ */ React.createElement("a", {
+  }, /* @__PURE__ */ React.createElement(Button, {
+    text: "More"
+  })), !slug && /* @__PURE__ */ React.createElement("a", {
     href: outlink,
     target: "_blank",
     style: {
