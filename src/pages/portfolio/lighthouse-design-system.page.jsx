@@ -10,10 +10,18 @@ import lighthouse_05 from "../../assets/lighthouse_05.png"
 import lighthouse_06 from "../../assets/lighthouse_06.png"
 import lighthouse_07 from "../../assets/lighthouse_07.png"
 import lighthouse_08 from "../../assets/lighthouse_08.png"
+import { Helmet } from "react-helmet-async"
 
 export function LighthouseDesignSystemPage() {
   return (
     <Layout>
+      <Helmet>
+        <title>My Title</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+        <meta name="description" content="Helmet application" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={lighthouse_01} />
+      </Helmet>
       <Summary />
       <Gallery
         images={[
