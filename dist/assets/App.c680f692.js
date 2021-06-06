@@ -8220,7 +8220,7 @@ function HomePage() {
   const [tags, setTags] = react.exports.useState(["develop", "design", "marketing"]);
   return /* @__PURE__ */ React.createElement(Layout, {
     home: true
-  }, /* @__PURE__ */ React.createElement("h3", null, "Design Engineer"), /* @__PURE__ */ React.createElement("p", null, "yongmin ruucm is an experienced front-end developer who loves to build useful and joyful software."), /* @__PURE__ */ React.createElement(AnimateSharedLayout, null, /* @__PURE__ */ React.createElement("div", {
+  }, /* @__PURE__ */ React.createElement("h3", null, "Design Engineer."), /* @__PURE__ */ React.createElement("p", null, "yongmin ruucm is an experienced front-end developer who loves to build useful and joyful software."), /* @__PURE__ */ React.createElement(AnimateSharedLayout, null, /* @__PURE__ */ React.createElement("div", {
     style: {
       textAlign: "right",
       marginBottom: 7
