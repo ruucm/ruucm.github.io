@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 // @ts-ignore
-import { Button } from "https://framerusercontent.com/modules/9yCP42jHRUKb7D1zVIaf/D19x3J7yt8o0t0SYRaJY/Button.js"
+// import { Button } from "https://framerusercontent.com/modules/9yCP42jHRUKb7D1zVIaf/D19x3J7yt8o0t0SYRaJY/Button.js"
 
 const wrap = {
   active: {
@@ -66,9 +66,9 @@ export function Card({ title, duration, description, outlink, slug, tags }) {
               color: "blue",
             }}
           >
-            <Button text="More" />
-            {/* {slug && "More"}
-            {outlink && "More (outlink)"} */}
+            {/* <Button text="More" /> */}
+            {slug && "More"}
+            {outlink && "More (outlink)"}
           </div>
           <em
             style={{
