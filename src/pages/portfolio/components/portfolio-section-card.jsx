@@ -12,6 +12,7 @@ const GridWrap = styled.div`
   grid-template-columns: 2fr 3fr;
   gap: 30px;
   direction: ltr;
+  /* align-items: center; */
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
