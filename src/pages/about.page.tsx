@@ -1,7 +1,7 @@
 import React from "react"
 import { Layout } from "../components"
 // @ts-ignore
-import ProfileSticker from "https://framerusercontent.com/modules/5EaLh0KVaiYgE67ROHLy/EUOIupBEZSxXvFrMhkvD/JgWSPuRfa.js"
+import ProfileSticker from "https://framerusercontent.com/modules/5EaLh0KVaiYgE67ROHLy/cnPtfAs5hGsPAxvyY8ac/JgWSPuRfa.js"
 import styled, { css } from "styled-components"
 
 const ParagraphWithImage = styled.div`
