@@ -13,7 +13,7 @@ export function HomePage() {
     <Layout home>
       <h3>Design Engineer</h3>
       <p>
-        yongmin ruucm is an experienced front-end developer who loves to build
+        yongmin ruucm is an experienced front-end developer who loves to deliver
         useful and joyful software.
       </p>
       <AnimateSharedLayout>
