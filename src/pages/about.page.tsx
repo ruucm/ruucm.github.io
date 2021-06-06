@@ -1,6 +1,5 @@
 import React from "react"
 import { Layout } from "../components"
-// import profile from "../assets/profile-duotone.png"
 // @ts-ignore
 import ProfileSticker from "https://framerusercontent.com/modules/5EaLh0KVaiYgE67ROHLy/EUOIupBEZSxXvFrMhkvD/JgWSPuRfa.js"
 import styled, { css } from "styled-components"
@@ -40,13 +39,6 @@ export function AboutPage() {
         </p>
 
         <ProfileWrap>
-          {/* <img
-            src={profile}
-            style={{
-              width: 160,
-              borderRadius: 1000,
-            }}
-          /> */}
           <ProfileSticker
             style={{
               cursor: "pointer",
