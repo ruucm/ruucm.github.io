@@ -117,3 +117,5 @@ export const cardDatas = [
     ],
   },
 ]
+
+export const contactMail = "ruucm@ruucm.work"

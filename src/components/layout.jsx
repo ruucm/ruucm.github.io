@@ -1,8 +1,11 @@
 import { useHover } from "../hooks/use-hover"
 import { Link } from "react-router-dom"
+import { contactMail } from "../consts"
+import { useClipboard } from "../hooks/use-clipboard"
 
 export function Layout({ children, home = false }) {
   const [hoverRef, isHover] = useHover()
+  const { hasCopied, onCopy } = useClipboard(contactMail)
 
   return (
     <>
@@ -51,8 +54,15 @@ export function Layout({ children, home = false }) {
               display: "inline-block",
             }}
           >
-            <a href="http://twitter.com/ruucm" target="_blank">
-              ruucm.a@gmail.com
+            <a
+              onClick={onCopy}
+              style={{
+                color: "blue",
+                textDecoration: "underline",
+                cursor: "pointer",
+              }}
+            >
+              {hasCopied ? "copied" : contactMail}
             </a>
             <br />
             <a href="http://twitter.com/ruucm" target="_blank">
