@@ -1,3 +1,4 @@
+import React from "react"
 import { useState } from "react"
 import { Card, Layout } from "../components"
 import { cardDatas } from "../consts"
@@ -10,7 +11,7 @@ export function HomePage() {
 
   return (
     <Layout home>
-      <h3>Design Engineer.</h3>
+      <h3>Design Engineer</h3>
       <p>
         yongmin ruucm is an experienced front-end developer who loves to build
         useful and joyful software.
