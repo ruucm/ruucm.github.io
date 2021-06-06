@@ -6,21 +6,14 @@ import problem_youtube from "../../assets/problem-youtube.png"
 import solution_video_explorer from "../../assets/solution-video-explorer.gif"
 import problem_students_management from "../../assets/problem-students-management.png"
 import solution_students_management from "../../assets/solution-students-management.png"
+import { SubTitle } from "./components/sub-title"
 
 export function HarborSchoolPage(props) {
   return (
     <Layout>
       <Summary />
       <AnimateSharedLayout>
-        <h4
-          style={{
-            textAlign: "right",
-            fontWeight: 400,
-            color: "blue",
-          }}
-        >
-          Education Content Experience
-        </h4>
+        <SubTitle>Education Content Experience</SubTitle>
         <div
           style={{
             display: "grid",
@@ -50,15 +43,7 @@ export function HarborSchoolPage(props) {
           />
         </div>
 
-        <h4
-          style={{
-            textAlign: "right",
-            fontWeight: 400,
-            color: "blue",
-          }}
-        >
-          Internal Student Management System
-        </h4>
+        <SubTitle>Internal Student Management System</SubTitle>
         <div
           style={{
             display: "grid",

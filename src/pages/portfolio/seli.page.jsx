@@ -9,6 +9,7 @@ import seli_03 from "../../assets/seli_03.png"
 import seli_04 from "../../assets/seli_04.png"
 import seli_cms_problem from "../../assets/seli-cms-problem.png"
 import seli_cms_notion from "../../assets/seli-cms-notion.png"
+import { SubTitle } from "./components/sub-title"
 
 export function SLEIPage(props) {
   return (
@@ -21,15 +22,7 @@ export function SLEIPage(props) {
         }}
       />
       <AnimateSharedLayout>
-        <h4
-          style={{
-            textAlign: "right",
-            fontWeight: 400,
-            color: "blue",
-          }}
-        >
-          Delight Writing Experience for Magazine Website
-        </h4>
+        <SubTitle>Delight Writing Experience for Magazine Website</SubTitle>
         <div
           style={{
             display: "grid",

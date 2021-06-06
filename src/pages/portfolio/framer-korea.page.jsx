@@ -4,21 +4,14 @@ import { AnimateSharedLayout } from "framer-motion"
 import { Summary } from "./components/summary"
 import framer_korea_2019 from "../../assets/framer-korea-2019.png"
 import framer_korea_2020 from "../../assets/framer-korea-2020.png"
+import { SubTitle } from "./components/sub-title"
 
 export function FramerKoreaPage(props) {
   return (
     <Layout>
       <Summary />
       <AnimateSharedLayout>
-        <h4
-          style={{
-            textAlign: "right",
-            fontWeight: 400,
-            color: "blue",
-          }}
-        >
-          2019 Framer Korea Meetup Website
-        </h4>
+        <SubTitle>2019 Framer Korea Meetup Website</SubTitle>
         <PortfolioSectionCard
           img={framer_korea_2019}
           title=""
@@ -28,15 +21,7 @@ export function FramerKoreaPage(props) {
           `}
         />
 
-        <h4
-          style={{
-            textAlign: "right",
-            fontWeight: 400,
-            color: "blue",
-          }}
-        >
-          2020 Framer Korea Meetup Website
-        </h4>
+        <SubTitle>2020 Framer Korea Meetup Website</SubTitle>
         <PortfolioSectionCard
           img={framer_korea_2020}
           title=""
