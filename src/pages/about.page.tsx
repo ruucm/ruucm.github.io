@@ -3,17 +3,29 @@ import { Layout } from "../components"
 // import profile from "../assets/profile-duotone.png"
 // @ts-ignore
 import ProfileSticker from "https://framerusercontent.com/modules/5EaLh0KVaiYgE67ROHLy/EUOIupBEZSxXvFrMhkvD/JgWSPuRfa.js"
+import styled, { css } from "styled-components"
+
+const ParagraphWithImage = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap-reverse;
+  }
+`
+const ProfileWrap = styled.div`
+  padding: 0 32px 32px 32px;
+
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
+`
 
 export function AboutPage() {
   return (
     <Layout>
       <h3>About</h3>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
+      <ParagraphWithImage>
         <p>
           My story starts from making a simple android socket during the army
           services. It directly inspires me and gives me a sight of the internet
@@ -27,11 +39,7 @@ export function AboutPage() {
           functionalities easily.
         </p>
 
-        <div
-          style={{
-            padding: "0 32px 32px 32px",
-          }}
-        >
+        <ProfileWrap>
           {/* <img
             src={profile}
             style={{
@@ -44,8 +52,8 @@ export function AboutPage() {
               cursor: "pointer",
             }}
           />
-        </div>
-      </div>
+        </ProfileWrap>
+      </ParagraphWithImage>
 
       <p
         style={{
