@@ -4,7 +4,7 @@
     "start": "vite --port 4000 --host=0.0.0.0",
     "build": "vite build && cp 404.html dist/404.html",
     "serve": "vite preview",
-    "deploy": "touch dist/.nojekyll && echo \"gitpages.ruucm.work\" >> dist/CNAME && git add dist/ && git commit -m \"Deploy Vite.js to gh-pages\" && git subtree push --prefix dist origin gh-pages"
+    "deploy": "touch dist/.nojekyll && echo \"gh.ruucm.work\" >> dist/CNAME && git add dist/ && git commit -m \"Deploy Vite.js to gh-pages\" && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "@types/react-router-dom": "^5.1.7",
