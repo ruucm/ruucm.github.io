@@ -53,6 +53,7 @@ export function Layout({ children, home = false }) {
               position: "sticky",
               top: "10vh",
               display: "inline-block",
+              lineHeight: 1.6,
             }}
           >
             <a
