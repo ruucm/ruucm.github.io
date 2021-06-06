@@ -1,3 +1,22 @@
+var __defProp = Object.defineProperty;
+var __defProps = Object.defineProperties;
+var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols = Object.getOwnPropertySymbols;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues = (a2, b2) => {
+  for (var prop in b2 || (b2 = {}))
+    if (__hasOwnProp.call(b2, prop))
+      __defNormalProp(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(b2)) {
+      if (__propIsEnum.call(b2, prop))
+        __defNormalProp(a2, prop, b2[prop]);
+    }
+  return a2;
+};
+var __spreadProps = (a2, b2) => __defProps(a2, __getOwnPropDescs(b2));
 import { a as React$1, r as react } from "./vendor.c5ab3cfb.js";
 function _setPrototypeOf(o, p2) {
   _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf2(o2, p3) {
@@ -7818,13 +7837,20 @@ const wrap = {
   }
 };
 function Card({ title, duration, description, outlink, slug, tags }) {
-  return /* @__PURE__ */ React.createElement(motion.div, {
+  const LinkComp = slug ? Link : "a";
+  const linkProps = slug ? { to: `/portfolio/${slug}` } : { href: outlink, target: "_blank" };
+  return /* @__PURE__ */ React$1.createElement(LinkComp, __spreadProps(__spreadValues({}, linkProps), {
+    style: {
+      textDecoration: "none",
+      color: "black"
+    }
+  }), /* @__PURE__ */ React$1.createElement(motion.div, {
     layoutId: title,
     transition: {
       duration: 0.36
     },
     style: {}
-  }, /* @__PURE__ */ React.createElement(motion.div, {
+  }, /* @__PURE__ */ React$1.createElement(motion.div, {
     initial: wrap.inActive,
     animate: wrap.active,
     exit: wrap.inActive,
@@ -7836,31 +7862,24 @@ function Card({ title, duration, description, outlink, slug, tags }) {
       border: "1px solid black",
       padding: "30px 15px"
     }
-  }, /* @__PURE__ */ React.createElement("h4", {
+  }, /* @__PURE__ */ React$1.createElement("h4", {
     style: {
       marginTop: 0,
       textTransform: "lowercase"
     }
-  }, title, duration && ` (${duration})`), /* @__PURE__ */ React.createElement("p", null, description), slug && /* @__PURE__ */ React.createElement(Link, {
-    to: `/portfolio/${slug}`,
+  }, title, duration && ` (${duration})`), /* @__PURE__ */ React$1.createElement("p", null, description), /* @__PURE__ */ React$1.createElement("div", {
     style: {
-      textDecoration: "none"
+      color: "blue"
     }
-  }, "More"), !slug && /* @__PURE__ */ React.createElement("a", {
-    href: outlink,
-    target: "_blank",
-    style: {
-      textDecoration: "none"
-    }
-  }, "More (outlink)"), /* @__PURE__ */ React.createElement("em", {
+  }, slug && "More", outlink && "More (outlink)"), /* @__PURE__ */ React$1.createElement("em", {
     style: {
       position: "absolute",
       right: 15,
       bottom: 8
     }
-  }, tags.map((tag, id) => /* @__PURE__ */ React.createElement("span", {
+  }, tags.map((tag, id) => /* @__PURE__ */ React$1.createElement("span", {
     key: id
-  }, tag, id < tags.length - 1 && ",", " ")))));
+  }, tag, id < tags.length - 1 && ",", " "))))));
 }
 function useHover(option = { thresholdTime: 0 }) {
   const { thresholdTime } = option;
@@ -7892,46 +7911,6 @@ function useHover(option = { thresholdTime: 0 }) {
     }
   }, [ref.current]);
   return [ref, value];
-}
-function Layout({ children, home = false }) {
-  const [hoverRef, isHover] = useHover();
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("header", null, /* @__PURE__ */ React.createElement(Link, {
-    to: "/"
-  }, /* @__PURE__ */ React.createElement("h2", {
-    style: {
-      display: "inline-block",
-      padding: 5,
-      cursor: "pointer"
-    },
-    ref: hoverRef
-  }, isHover ? "\uC548\uB155 \uD558\uC138\uC694," : "Hello,", /* @__PURE__ */ React.createElement("br", null), /* @__PURE__ */ React.createElement("span", {
-    style: {
-      textDecoration: "underline"
-    }
-  }, "I'm yongmin ruucm.")))), /* @__PURE__ */ React.createElement("div", {
-    style: {
-      display: "grid",
-      gridTemplateColumns: "4fr 1fr"
-    }
-  }, /* @__PURE__ */ React.createElement("main", null, children), /* @__PURE__ */ React.createElement("footer", {
-    style: {
-      WebkitWritingMode: "vertical-rl",
-      MsWritingMode: "tb-rl",
-      writingMode: "vertical-rl"
-    }
-  }, /* @__PURE__ */ React.createElement("div", {
-    style: {
-      position: "sticky",
-      top: "10vh",
-      display: "inline-block"
-    }
-  }, /* @__PURE__ */ React.createElement("a", {
-    href: "http://twitter.com/ruucm",
-    target: "_blank"
-  }, "ruucm.a@gmail.com"), /* @__PURE__ */ React.createElement("br", null), /* @__PURE__ */ React.createElement("a", {
-    href: "http://twitter.com/ruucm",
-    target: "_blank"
-  }, "@ruucm")))));
 }
 const cardDatas = [
   {
@@ -8045,6 +8024,190 @@ const cardDatas = [
     ]
   }
 ];
+const contactMail = "ruucm@ruucm.work";
+var toggleSelection = function() {
+  var selection = document.getSelection();
+  if (!selection.rangeCount) {
+    return function() {
+    };
+  }
+  var active = document.activeElement;
+  var ranges = [];
+  for (var i = 0; i < selection.rangeCount; i++) {
+    ranges.push(selection.getRangeAt(i));
+  }
+  switch (active.tagName.toUpperCase()) {
+    case "INPUT":
+    case "TEXTAREA":
+      active.blur();
+      break;
+    default:
+      active = null;
+      break;
+  }
+  selection.removeAllRanges();
+  return function() {
+    selection.type === "Caret" && selection.removeAllRanges();
+    if (!selection.rangeCount) {
+      ranges.forEach(function(range) {
+        selection.addRange(range);
+      });
+    }
+    active && active.focus();
+  };
+};
+var deselectCurrent = toggleSelection;
+var clipboardToIE11Formatting = {
+  "text/plain": "Text",
+  "text/html": "Url",
+  "default": "Text"
+};
+var defaultMessage = "Copy to clipboard: #{key}, Enter";
+function format(message) {
+  var copyKey = (/mac os x/i.test(navigator.userAgent) ? "\u2318" : "Ctrl") + "+C";
+  return message.replace(/#{\s*key\s*}/g, copyKey);
+}
+function copy(text, options) {
+  var debug, message, reselectPrevious, range, selection, mark, success = false;
+  if (!options) {
+    options = {};
+  }
+  debug = options.debug || false;
+  try {
+    reselectPrevious = deselectCurrent();
+    range = document.createRange();
+    selection = document.getSelection();
+    mark = document.createElement("span");
+    mark.textContent = text;
+    mark.style.all = "unset";
+    mark.style.position = "fixed";
+    mark.style.top = 0;
+    mark.style.clip = "rect(0, 0, 0, 0)";
+    mark.style.whiteSpace = "pre";
+    mark.style.webkitUserSelect = "text";
+    mark.style.MozUserSelect = "text";
+    mark.style.msUserSelect = "text";
+    mark.style.userSelect = "text";
+    mark.addEventListener("copy", function(e2) {
+      e2.stopPropagation();
+      if (options.format) {
+        e2.preventDefault();
+        if (typeof e2.clipboardData === "undefined") {
+          debug && console.warn("unable to use e.clipboardData");
+          debug && console.warn("trying IE specific stuff");
+          window.clipboardData.clearData();
+          var format2 = clipboardToIE11Formatting[options.format] || clipboardToIE11Formatting["default"];
+          window.clipboardData.setData(format2, text);
+        } else {
+          e2.clipboardData.clearData();
+          e2.clipboardData.setData(options.format, text);
+        }
+      }
+      if (options.onCopy) {
+        e2.preventDefault();
+        options.onCopy(e2.clipboardData);
+      }
+    });
+    document.body.appendChild(mark);
+    range.selectNodeContents(mark);
+    selection.addRange(range);
+    var successful = document.execCommand("copy");
+    if (!successful) {
+      throw new Error("copy command was unsuccessful");
+    }
+    success = true;
+  } catch (err) {
+    debug && console.error("unable to copy using execCommand: ", err);
+    debug && console.warn("trying IE specific stuff");
+    try {
+      window.clipboardData.setData(options.format || "text", text);
+      options.onCopy && options.onCopy(window.clipboardData);
+      success = true;
+    } catch (err2) {
+      debug && console.error("unable to copy using clipboardData: ", err2);
+      debug && console.error("falling back to prompt");
+      message = format("message" in options ? options.message : defaultMessage);
+      window.prompt(message, text);
+    }
+  } finally {
+    if (selection) {
+      if (typeof selection.removeRange == "function") {
+        selection.removeRange(range);
+      } else {
+        selection.removeAllRanges();
+      }
+    }
+    if (mark) {
+      document.body.removeChild(mark);
+    }
+    reselectPrevious();
+  }
+  return success;
+}
+var copyToClipboard = copy;
+function useClipboard(text, timeout = 1500) {
+  const [hasCopied, setHasCopied] = react.exports.useState(false);
+  const onCopy = react.exports.useCallback(() => {
+    const didCopy = copyToClipboard(text);
+    setHasCopied(didCopy);
+  }, [text]);
+  react.exports.useEffect(() => {
+    if (hasCopied) {
+      const id = setTimeout(() => {
+        setHasCopied(false);
+      }, timeout);
+      return () => clearTimeout(id);
+    }
+  }, [timeout, hasCopied]);
+  return { value: text, onCopy, hasCopied };
+}
+function Layout({ children, home = false }) {
+  const [hoverRef, isHover] = useHover();
+  const { hasCopied, onCopy } = useClipboard(contactMail);
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("header", null, /* @__PURE__ */ React.createElement(Link, {
+    to: "/"
+  }, /* @__PURE__ */ React.createElement("h2", {
+    style: {
+      display: "inline-block",
+      padding: 5,
+      cursor: "pointer"
+    },
+    ref: hoverRef
+  }, isHover ? "\uC548\uB155 \uD558\uC138\uC694," : "Hello,", /* @__PURE__ */ React.createElement("br", null), /* @__PURE__ */ React.createElement("span", {
+    style: {
+      textDecoration: "underline"
+    }
+  }, "I'm yongmin ruucm.")))), /* @__PURE__ */ React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "4fr 1fr"
+    }
+  }, /* @__PURE__ */ React.createElement("main", null, children), /* @__PURE__ */ React.createElement("footer", {
+    style: {
+      WebkitWritingMode: "vertical-rl",
+      MsWritingMode: "tb-rl",
+      writingMode: "vertical-rl"
+    }
+  }, /* @__PURE__ */ React.createElement("div", {
+    style: {
+      position: "sticky",
+      top: "10vh",
+      display: "inline-block"
+    }
+  }, /* @__PURE__ */ React.createElement("a", {
+    onClick: onCopy,
+    style: {
+      color: "blue",
+      textDecoration: "underline",
+      cursor: "pointer"
+    }
+  }, hasCopied ? "copied" : contactMail), /* @__PURE__ */ React.createElement("br", null), /* @__PURE__ */ React.createElement("a", {
+    href: "http://twitter.com/ruucm",
+    target: "_blank"
+  }, "@ruucm"), /* @__PURE__ */ React.createElement("br", null), /* @__PURE__ */ React.createElement(Link, {
+    to: "/about"
+  }, "about")))));
+}
 function removeA(arr, item) {
   var index2 = arr.indexOf(item);
   if (index2 !== -1) {
@@ -8057,7 +8220,7 @@ function HomePage() {
   const [tags, setTags] = react.exports.useState(["develop", "design", "marketing"]);
   return /* @__PURE__ */ React.createElement(Layout, {
     home: true
-  }, /* @__PURE__ */ React.createElement("h3", null, "Design Engineer"), /* @__PURE__ */ React.createElement("p", null, "yongmin ruucm is an experienced front-end developer with a designer's mindset."), /* @__PURE__ */ React.createElement(AnimateSharedLayout, null, /* @__PURE__ */ React.createElement("div", {
+  }, /* @__PURE__ */ React.createElement("h3", null, "Design Engineer"), /* @__PURE__ */ React.createElement("p", null, "yongmin ruucm is an experienced front-end developer who loves to build useful and joyful software."), /* @__PURE__ */ React.createElement(AnimateSharedLayout, null, /* @__PURE__ */ React.createElement("div", {
     style: {
       textAlign: "right",
       marginBottom: 7
@@ -9234,6 +9397,7 @@ const GridWrap = qe.div`
   grid-template-columns: 2fr 3fr;
   gap: 30px;
   direction: ltr;
+  /* align-items: center; */
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -9461,6 +9625,15 @@ function VincentProjectPage(props) {
     images: [vincent_01, vincent_02, vincent_03, vincent_04]
   }));
 }
+var profile = "/assets/profile.a74b97bb.jpg";
+function AboutPage() {
+  return /* @__PURE__ */ React.createElement(Layout, null, /* @__PURE__ */ React.createElement("h3", null, "About"), /* @__PURE__ */ React.createElement("img", {
+    src: profile,
+    style: {
+      width: 200
+    }
+  }));
+}
 function App() {
   return /* @__PURE__ */ React$1.createElement(BrowserRouter, null, /* @__PURE__ */ React$1.createElement(Switch, null, /* @__PURE__ */ React$1.createElement(Route, {
     path: "/portfolio/vincent-project"
@@ -9477,6 +9650,8 @@ function App() {
   }, /* @__PURE__ */ React$1.createElement(HarborSchoolPage, null)), /* @__PURE__ */ React$1.createElement(Route, {
     path: "/portfolio/lighthouse-design-system"
   }, /* @__PURE__ */ React$1.createElement(LighthouseDesignSystemPage, null)), /* @__PURE__ */ React$1.createElement(Route, {
+    path: "/about"
+  }, /* @__PURE__ */ React$1.createElement(AboutPage, null)), /* @__PURE__ */ React$1.createElement(Route, {
     path: "/"
   }, /* @__PURE__ */ React$1.createElement(HomePage, null))));
 }
