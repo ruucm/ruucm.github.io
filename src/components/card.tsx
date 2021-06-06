@@ -13,7 +13,7 @@ const wrap = {
 }
 
 export function Card({ title, duration, description, outlink, slug, tags }) {
-  const LinkComp = slug ? Link : "a"
+  const LinkComp: any = slug ? Link : "a"
   const linkProps = slug
     ? { to: `/portfolio/${slug}` }
     : { href: outlink, target: "_blank" }

@@ -1,3 +1,4 @@
+import React from "react"
 import { Layout } from "../../components"
 import { Summary } from "./components/summary"
 import { Gallery } from "./components/gallery"
@@ -10,7 +11,7 @@ import lighthouse_06 from "../../assets/lighthouse_06.png"
 import lighthouse_07 from "../../assets/lighthouse_07.png"
 import lighthouse_08 from "../../assets/lighthouse_08.png"
 
-export function LighthouseDesignSystemPage(props) {
+export function LighthouseDesignSystemPage() {
   return (
     <Layout>
       <Summary />

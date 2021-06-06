@@ -1,3 +1,4 @@
+import React from "react"
 import { useHover } from "../hooks/use-hover"
 import { Link } from "react-router-dom"
 import { contactMail } from "../consts"

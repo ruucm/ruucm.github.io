@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import { Card, Layout } from "../components"
 import { cardDatas } from "../consts"
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion"
