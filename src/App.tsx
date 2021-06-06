@@ -8,6 +8,7 @@ import { SLEIPage } from "./pages/portfolio/seli.page"
 import { PulsenPage } from "./pages/portfolio/pulsen.page"
 import { CnyttanPage } from "./pages/portfolio/cnyttan.page"
 import { VincentProjectPage } from "./pages/portfolio/vincent-project.page"
+import { AboutPage } from "./pages/about.page"
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
         </Route>
         <Route path="/portfolio/lighthouse-design-system">
           <LighthouseDesignSystemPage />
+        </Route>
+        <Route path="/about">
+          <AboutPage />
         </Route>
         <Route path="/">
           <HomePage />

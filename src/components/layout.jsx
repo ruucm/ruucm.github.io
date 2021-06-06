@@ -68,6 +68,8 @@ export function Layout({ children, home = false }) {
             <a href="http://twitter.com/ruucm" target="_blank">
               @ruucm
             </a>
+            <br />
+            <Link to="/about">about</Link>
           </div>
 
           {/* <br /> */}
