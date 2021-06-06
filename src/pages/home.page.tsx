@@ -12,8 +12,8 @@ export function HomePage() {
     <Layout home>
       <h3>Design Engineer</h3>
       <p>
-        yongmin ruucm is an experienced front-end developer with a designer's
-        mindset.
+        yongmin ruucm is an experienced front-end developer who loves to build
+        useful and joyful software.
       </p>
       <AnimateSharedLayout>
         <div
